@@ -1,0 +1,89 @@
+.hero {
+	position: relative;
+	overflow: hidden;
+	background: url('../media/img/hero-bg.jpg') center center /cover no-repeat;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 11.3rem;
+		right: -1rem;
+		width: 46.4rem;
+		height: 35.7rem;
+		background: url('../media/img/s-decor.png') 0 0 / 100% 100% no-repeat;
+	}
+
+	&__row {
+		height: 100vh;
+		padding: 11.7rem 0 13.7rem;
+		flex-direction: column;
+	}
+
+	&__title {
+		max-width: 98.1rem;
+		margin-bottom: 2.7rem;
+		font-weight: 500;
+		font-size: 8rem;
+		line-height: 10rem;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+
+		sup {
+			font-size: 4.8rem;
+			line-height: 1;
+		}
+	}
+
+	&__subtitle {
+		flex: 1 1 auto;
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+		color: #fff;
+		letter-spacing: 0.01em;
+	}
+
+	&__btn {
+		min-width: 47.7rem;
+		padding: 5.6rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		background: url('../media/img/hero-bg-mob.jpg') center center /cover no-repeat;
+
+		&::after {
+			display: none;
+		}
+
+		&__row {
+			height: auto;
+			padding: 14.4rem 0 19.4rem;
+		}
+
+		&__title {
+			font-size: 3.2rem;
+			line-height: 4rem;
+			letter-spacing: 0;
+
+			sup {
+				font-size: 1.8rem;
+			}
+		}
+
+		&__subtitle {
+			margin-bottom: 2.9rem;
+			font-size: 1.6rem;
+			line-height: 2.1rem;
+			letter-spacing: 0;
+		}
+
+		&__btn {
+			min-width: fit-content;
+			padding: 1.9rem 2.4rem;
+			font-size: 1.4rem;
+			line-height: 1.6rem;
+		}
+	}
+
+}

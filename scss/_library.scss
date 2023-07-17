@@ -1,0 +1,1011 @@
+$main-color: #02023d;
+$accent-color: #e9d3af;
+$gray: #7d8193;
+
+html {
+	font-size: 0.52085vw;
+}
+
+body {
+	min-width: 320px;
+	font-family: 'Stolzl', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: $main-color;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+button {
+	font-family: 'Stolzl', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+b {
+	font-weight: 700;
+}
+
+img {
+	object-fit: cover;
+	object-position: center;
+}
+
+h1 {
+	color: #fff;
+}
+
+@keyframes blick {
+	0% {
+		left: -100%;
+	}
+
+	100% {
+		left: 200%;
+	}
+}
+
+@keyframes loadingBg {
+	0% {
+		background-position: 2%;
+	}
+
+	100% {
+		background-position: 100%;
+	}
+}
+
+@keyframes radial-pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba($color: $accent-color, $alpha: 0.5);
+	}
+
+	100% {
+		box-shadow: 0 0 0 1rem rgba(207, 241, 207, 0);
+	}
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes load {
+	to {
+		transform: rotate(1turn)
+	}
+}
+
+
+.main {
+	background-color: #fff;
+}
+
+.animation {
+	transition: 1s;
+	opacity: 0 !important;
+	transform: translateY(5.2083333333vw) !important;
+}
+
+.animation.visible {
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+}
+
+.container {
+	max-width: 140rem;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.d-none {
+	display: none;
+}
+
+.accent {
+	color: $accent-color;
+}
+
+.validate_error {
+	border: 0.1rem solid red;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.content {
+	position: relative;
+	width: calc(100% - 17.5rem);
+}
+
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 6.5rem;
+	height: 6.5rem;
+	border-radius: 50%;
+	border: 0.1rem solid transparent;
+	transition-property: transform, background-color, border-color, box-shadow;
+	transition: 0.3s ease-in-out;
+
+	path {
+		fill: #fff;
+		transition: fill 0.3s ease-in-out;
+	}
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.social--wa {
+	background-color: #72d888;
+
+	svg {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+
+	&:hover {
+		border-color: #72d888;
+		background-color: #fff;
+		box-shadow: 0 0 2rem 0 rgba(#72d888, 0.5);
+
+		path {
+			fill: #72d888;
+		}
+	}
+}
+
+.social--tg {
+	background-color: #45a0eb;
+
+	svg {
+		width: 2.5rem;
+		height: 2.1rem;
+	}
+
+	&:hover {
+		border-color: #45a0eb;
+		background-color: #fff;
+		box-shadow: 0 0 2rem 0 rgba(#45a0eb, 0.4);
+
+		path {
+			fill: #45a0eb;
+		}
+	}
+}
+
+
+.conf {
+	font-size: 1.4rem;
+	line-height: 2.4rem;
+	text-align: center;
+	color: $main-color;
+	text-decoration: underline;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+// заголовки секций
+.section-title {
+	margin-bottom: 2.7rem;
+	font-weight: 500;
+	font-size: 8rem;
+	line-height: 10rem;
+	text-transform: uppercase;
+	color: $main-color;
+}
+
+.section-subtitle {
+	font-size: 3.2rem;
+	line-height: 3.8rem;
+	color: $main-color;
+}
+
+
+// основные кнопки
+.main-btn {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	padding: 4rem;
+	border-radius: 8rem;
+	overflow: hidden;
+	cursor: default;
+	border: 0.1rem solid transparent;
+	transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+	&__text {
+		position: relative;
+		z-index: 3;
+		font-family: 'Stolzl';
+		font-weight: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		text-align: center;
+		letter-spacing: 0.02em;
+		color: inherit;
+	}
+
+	&--blue {
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 1;
+		background-color: $main-color;
+		color: white;
+
+		&:not(:disabled):hover {
+			color: $main-color;
+			border-color: $main-color;
+		}
+	}
+
+	&--white {
+		font-weight: 400;
+		font-size: 2.2rem;
+		line-height: 1.6rem;
+		color: $main-color;
+		background-color: #fff;
+
+		&.main-btn::after,
+		&.main-btn::before {
+			background-color: $accent-color;
+		}
+
+		&:hover:not(:disabled) {
+			border-color: $accent-color;
+			color: #fff;
+		}
+
+		&.main-btn:not(:disabled) .btn-blick::after {
+			width: 10rem;
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(224, 224, 224, 0.4));
+		}
+
+	}
+
+	&--transparent {
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		color: $accent-color;
+		border-color: $accent-color;
+		background-color: transparent;
+		overflow: hidden;
+		transition-property: color, background-color;
+		transition: 0.3s ease;
+
+		&:hover:not(:disabled) {
+			color: #fff;
+		}
+
+		&.main-btn:not(:disabled) .btn-blick::after {
+			width: 3rem;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		width: 0.5rem;
+		height: 0.5rem;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		border-radius: 50%;
+		z-index: 1;
+		background-color: $accent-color;
+		transition: 0.8s ease;
+	}
+
+	&::before {
+		top: -1em;
+		left: -1em;
+	}
+
+	&::after {
+		left: calc(100% + 1em);
+		top: calc(100% + 1em);
+	}
+
+	&:hover:not(:disabled) {
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			width: 60rem;
+			height: 60rem;
+		}
+
+		.btn-blick::after {
+			opacity: 0;
+		}
+	}
+
+
+	&.disabled,
+	&:disabled {
+		cursor: default;
+		opacity: 0.5;
+		overflow: visible;
+	}
+
+	&:active {
+		transform: scale(0.95);
+	}
+}
+
+// блик на кнопке
+.btn-blick {
+	position: absolute !important;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+	overflow: hidden;
+
+	.main-btn:not(:disabled) &::after {
+		content: "";
+		position: absolute;
+		left: -100%;
+		top: 0;
+		width: 6rem;
+		height: 100%;
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+		opacity: 0.8;
+		animation: blick 6s ease-in-out 2s infinite;
+		transform: skewX(-20deg);
+		transition: opacity 0.3s ease-in-out;
+	}
+}
+
+
+// кнопка прокрутки наверх
+.btn-top {
+	position: fixed;
+	bottom: -5rem;
+	right: 1rem;
+	z-index: 10;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $accent-color;
+	transition: bottom 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+
+	svg {
+		position: relative;
+		width: 2.5rem;
+		height: 1.3rem;
+		transition: bottom 0.3s ease-in-out;
+	}
+
+	path {
+		fill: #fff;
+	}
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 0 1.2vw rgba(0, 0, 0, 0.2);
+
+		svg {
+			bottom: 0.3rem;
+		}
+	}
+
+	&.active {
+		bottom: 1.3rem;
+	}
+}
+
+// label
+.label {
+	display: block;
+	margin-bottom: 1rem;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	color: $gray;
+}
+
+// input
+.input-wrap {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 4rem;
+		transform: translateY(-50%);
+		width: 2.6rem;
+		height: 2.6rem;
+		background: url('../media/svg/phone.svg') 0 0 / 100% 100% no-repeat;
+	}
+}
+
+.input {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 3.5rem 3.2rem;
+	border-radius: 50rem;
+	background-color: #fafafa;
+	font-family: 'Stolzl', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.8rem;
+	color: #183749;
+
+	&::placeholder {
+		font-family: inherit;
+		font-weight: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		letter-spacing: inherit;
+		color: $main-color;
+	}
+
+	&:not(.validate_error):focus {
+		border-color: $accent-color;
+	}
+}
+
+// согласие с чекбоксом
+.agree {
+	display: flex;
+	align-items: center;
+
+	&__checkbox {
+		position: relative;
+		flex: 0 0 1.4rem;
+		height: 1.4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.9rem;
+		border-radius: 0.1rem;
+		background: transparent;
+		border: 0.1rem solid $accent-color;
+		cursor: pointer;
+
+		&.check {
+			background: $accent-color;
+		}
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+		color: $main-color;
+		cursor: default;
+	}
+
+	&__link {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+		color: $main-color;
+		text-decoration: underline;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+}
+
+// стрелки слайдера
+.slider-btn {
+	position: absolute;
+	z-index: 5;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease-in-out;
+	background-color: $accent-color;
+
+	&--prev {
+		left: 0;
+	}
+
+	&--next {
+		right: 0;
+	}
+
+	path {
+		fill: $main-color;
+		transition: fill 0.3s ease-in-out;
+	}
+
+	svg {
+		width: 1.2rem;
+		height: 1.2rem;
+	}
+
+	&:hover {
+		background: $main-color;
+		cursor: pointer;
+	}
+
+	&.swiper-button-disabled:hover {
+		cursor: default;
+	}
+}
+
+.select {
+	width: 100%;
+	font-family: 'Stolzl', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.8rem;
+	color: $main-color;
+	position: relative;
+	z-index: 1;
+
+	& .custom-select-opener {
+		position: relative;
+		padding: 3.5rem 3.2rem;
+		border-radius: 50rem;
+		background-color: #f9f9f9;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 3.7rem;
+			width: 0.8rem;
+			height: 0.8rem;
+			border-left: 0.1rem solid $gray;
+			border-bottom: 0.1rem solid $gray;
+			transform: translateY(-50%) rotate(-45deg);
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+
+	& .custom-select-panel {
+		top: 100%;
+		z-index: 1;
+		background-color: #f9f9f9;
+	}
+
+	& .custom-select-container.is-open .custom-select-opener {
+		box-shadow: 0 0.42rem 0.5rem rgba(0, 0, 0, 0.1);
+		z-index: 3;
+	}
+
+	& .custom-select-container.is-open .custom-select-panel {
+		max-height: fit-content;
+		padding-top: 3rem;
+		top: calc(100% - 2rem);
+		border-radius: 0 0 1.5rem 1.5rem;
+		box-shadow: 0 0.42rem 0.5rem rgba(0, 0, 0, 0.1);
+	}
+
+	& .custom-select-container.is-open .custom-select-opener::after {
+		transform: translateY(19%) rotate(135deg);
+	}
+
+	& .custom-select-option {
+		padding: 3.5rem 3.2rem;
+	}
+
+	& .custom-select-option.has-focus {
+		background-color: #e6e6e6;
+	}
+}
+
+// липкое меню справа
+.sidemenu {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	z-index: 20;
+	width: 10rem;
+	transform: translateY(-50%) translateX(10rem);
+	transition: transform 0.7s ease-in-out;
+
+	&.hidden {
+		pointer-events: none;
+	}
+
+	&.visible {
+		transform: translateY(-50%) translateX(0);
+	}
+
+	&__close {
+		width: 3.3rem;
+		height: 3.3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 2.3rem;
+		border-radius: 50%;
+		background-color: $accent-color;
+		transition: background-color 0.3s ease-in-out, transform 0.7s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			background-color: darken($color: $accent-color, $amount: 10%);
+		}
+
+		svg {
+			width: 0.9rem;
+			height: 0.9rem;
+		}
+
+		&.close {
+			transform: translateX(10rem);
+		}
+	}
+
+	&__body {
+		flex-direction: column;
+		gap: 0.6rem;
+		margin-bottom: 2.3rem;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.7s linear;
+	}
+
+	&__item {
+		flex-shrink: 0;
+		width: 100%;
+		height: 10rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1.1rem 0.9rem;
+		border-radius: 0.5rem 0 0 0.5rem;
+		background-color: $accent-color;
+		transition: background-color 0.3s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			background-color: darken($color: $accent-color, $amount: 10%);
+		}
+
+		&:first-child .sidemenu__icon {
+			width: 2.1rem;
+			margin-bottom: 1.2rem;
+		}
+
+		&:nth-child(2) .sidemenu__icon {
+			width: 2.7rem;
+			margin-bottom: 0.5rem;
+		}
+
+		&:nth-child(3) .sidemenu__icon {
+			width: 3rem;
+			margin-bottom: 0.8rem;
+		}
+	}
+
+	&__icon {
+		height: auto;
+		margin: 0 auto;
+	}
+
+	&__name {
+		font-weight: 500;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		text-align: center;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	&__top {
+		width: 3.3rem;
+		height: 3.3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: $accent-color;
+		transition: background-color 0.3s ease-in-out,
+			transform 0.7s ease-in-out;
+
+		svg {
+			width: 0.8rem;
+			height: 0.6rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: darken($color: $accent-color, $amount: 10%);
+		}
+
+		&.active {
+			transform: rotate(180deg);
+		}
+
+		&.close {
+			transform: translateX(10rem);
+		}
+	}
+}
+
+.mobile {
+	display: none;
+}
+
+
+@media (max-width: 768px) {
+
+	html {
+		font-size: 3.125vw;
+	}
+
+	@keyframes radial-pulse {
+		0% {
+			box-shadow: 0 0 0 0 rgba($color: $accent-color, $alpha: 0.5);
+		}
+
+		100% {
+			box-shadow: 0 0 0 0.7rem rgba(207, 241, 207, 0);
+		}
+	}
+
+	.desktop {
+		display: none !important;
+	}
+
+	.mobile {
+		display: flex;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 3.7rem;
+	}
+
+	.section-title {
+		margin-bottom: 1rem;
+		font-size: 3.2rem;
+		line-height: 4.2rem;
+	}
+
+	.section-subtitle {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+	}
+
+	.main-btn {
+		padding: 2.2rem 1.8rem;
+
+		&__text {
+			letter-spacing: 0.024rem;
+		}
+
+		&--blue {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+
+		&--white {
+			font-size: 1.2rem;
+		}
+
+		&--transparent {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+
+	}
+
+	.btn-blick {
+
+		.main-btn:not(:disabled) &::after,
+		.main-btn:not(.disabled) &::after {
+			width: 5rem;
+		}
+	}
+
+	// кнопка прокрутки наверх
+	.btn-top {
+		bottom: -5rem;
+		right: 1rem;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 0.8rem;
+
+		svg {
+			width: 1.3rem;
+			height: 1rem;
+		}
+	}
+
+	// label
+	.label {
+		margin-bottom: 0.8rem;
+		font-size: 1rem;
+		line-height: 140%;
+	}
+
+	// input
+	.input-wrap::after {
+		right: 2rem;
+		width: 1.2rem;
+		height: 1.3rem;
+	}
+
+	.input {
+		padding: 2.1rem 2rem;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+
+	.agree {
+
+		&__checkbox {
+			flex: 0 0 1.4rem;
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-right: 1.5rem;
+			border-radius: 0.4rem;
+
+			&::after {
+				width: 0.5rem;
+				height: 0.4rem;
+			}
+		}
+
+		&__text,
+		&__link {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	.slider-btn {
+		width: 3.2rem;
+		height: 3.2rem;
+
+		svg {
+			width: 0.8rem;
+			height: 0.8rem;
+		}
+	}
+
+	.select {
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+
+		& .custom-select-opener {
+			padding: 2.4rem 1.8rem;
+
+			&::after {
+				right: -1rem;
+				width: 0.5rem;
+				height: 0.5rem;
+			}
+		}
+
+		& .custom-select-option {
+			padding: 2rem 1.8rem;
+		}
+	}
+
+	// липкое правое меню
+	.sidemenu {
+		width: 6rem;
+		transform: translateY(-50%);
+
+		&__close {
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-bottom: 1rem;
+
+			svg {
+				width: 0.7rem;
+				height: 0.7rem;
+			}
+		}
+
+		&__body {
+			gap: 0.4rem;
+			margin-bottom: 1rem;
+		}
+
+		&__item {
+			height: 6rem;
+			padding: 0.3rem;
+
+			&:first-child .sidemenu__icon {
+				width: 1.6rem;
+				margin-bottom: 0.5rem;
+			}
+
+			&:nth-child(2) .sidemenu__icon {
+				width: 1.7rem;
+				margin-bottom: 0.5rem;
+			}
+
+			&:nth-child(3) .sidemenu__icon {
+				width: 1.7rem;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+
+		&__name {
+			font-size: 0.9rem;
+			line-height: 1;
+		}
+
+		&__top {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+
+	.social {
+		width: 3.2rem;
+		height: 3.2rem;
+	}
+
+	.social--wa {
+		svg {
+			width: 1.3rem;
+			height: 1.3rem;
+		}
+	}
+
+	.social--tg {
+		svg {
+			width: 1.2rem;
+			height: 1rem;
+		}
+	}
+
+	.select {
+		font-size: 1.1rem;
+		line-height: 2.4rem;
+
+		& .custom-select-opener {
+			padding: 1.8rem 2.3rem;
+
+			&::after {
+				top: 45%;
+				right: 2.2rem;
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+
+		& .custom-select-option {
+			padding: 1.5rem 2.3rem;
+		}
+	}
+}
