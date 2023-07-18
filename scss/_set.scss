@@ -1,0 +1,280 @@
+.set {
+	position: relative;
+	padding: 5.8rem 0;
+	background: url('../media/img/sethouse.png') 0 bottom / 100% auto no-repeat, url('../media/svg/long-s.svg') 0 49rem / 100% 35.7rem no-repeat;
+
+	&__subtitle {
+		margin-bottom: 2.7rem;
+
+		sup {
+			font-size: 1.8rem;
+			line-height: 0.8;
+		}
+	}
+
+	&__label {
+		max-width: 70rem;
+		font-size: 2rem;
+		line-height: 3rem;
+		color: $gray;
+		letter-spacing: 0.01em;
+	}
+
+	&__list {
+		position: relative;
+		height: 83.2rem;
+	}
+
+	&__hint {
+		position: absolute;
+		z-index: 3;
+
+		&:hover {
+			.set__hint-text {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.set__plus::after,
+			.set__plus::before {
+				animation: none;
+			}
+		}
+
+		&:nth-child(1) {
+			top: 5.9rem;
+			left: 66.5rem;
+		}
+
+		&:nth-child(2) {
+			top: 24.5rem;
+			left: 27.7rem;
+		}
+
+		&:nth-child(3) {
+			top: 45rem;
+			left: 4.7rem;
+		}
+
+		&:nth-child(4) {
+			bottom: 28rem;
+			left: 23.4rem;
+		}
+
+		&:nth-child(5) {
+			bottom: 15.4rem;
+			left: 9rem;
+		}
+
+		&:nth-child(6) {
+			bottom: 4rem;
+			left: 18.4rem;
+		}
+
+		&:nth-child(7) {
+			bottom: 2.8rem;
+			left: 46.6rem;
+		}
+
+		&:nth-child(8) {
+			bottom: 22.3rem;
+			left: 51.2rem;
+		}
+
+		&:nth-child(9) {
+			bottom: 37.9rem;
+			left: 67.8rem;
+		}
+
+		&:nth-child(10) {
+			bottom: 30rem;
+			right: 31.7rem;
+		}
+
+		&:nth-child(11) {
+			bottom: 4.2rem;
+			right: 38rem;
+		}
+
+		&:nth-child(12) {
+			bottom: 28.5rem;
+			right: 11.4rem;
+		}
+
+		&:nth-child(13) {
+			bottom: 19.8rem;
+			right: -4.3rem;
+
+			.set__hint-text {
+				left: auto;
+				right: 0;
+				padding: 1rem 5.5rem 1rem 1.7rem;
+			}
+		}
+	}
+
+	&__plus {
+		position: relative;
+		z-index: 5;
+		width: 3.4rem;
+		height: 3.4rem;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		background-color: $accent-color;
+		font-size: 1.8rem;
+		line-height: 2rem;
+		color: #fff;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			border: 0.1rem solid $accent-color;
+			top: -1.8rem;
+			bottom: -1.8rem;
+			left: -1.8rem;
+			right: -1.8rem;
+			opacity: 0;
+			border-radius: 50%;
+			animation: pulse 2.5s linear infinite;
+		}
+
+		&::after {
+			animation-delay: 1.25s;
+		}
+	}
+
+	&__hint-text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 4;
+		width: fit-content;
+		padding: 1rem 1.7rem 1rem 5.5rem;
+		border-radius: 50rem;
+		box-shadow: 0 0 0.6rem 0.1rem rgba(0, 0, 0, 0.1);
+		background: #fff;
+		font-size: 1.4rem;
+		line-height: 1;
+		color: $main-color;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .3s ease-in-out;
+	}
+}
+
+@media (max-width: 768px) {
+	.set {
+		padding: 2.2rem 0;
+		background: url('../media/img/sethouse-mob.png') 3.7rem bottom / calc(100% - 3.7rem) auto no-repeat, url('../media/svg/long-s.svg') 2rem 35.6rem / 100% 5.8rem no-repeat;
+
+		&__subtitle {
+			margin-bottom: 1rem;
+
+			sup {
+				font-size: 1.1rem;
+			}
+		}
+
+		&__label {
+			margin-bottom: 1.7rem;
+			font-size: 1rem;
+			line-height: 1.4rem;
+			letter-spacing: 0;
+		}
+
+		&__list {
+			height: 18.9rem;
+		}
+
+		&__hint {
+			&:hover {
+				.set__hint-text {
+					opacity: 0;
+					visibility: hidden;
+				}
+
+				.set__plus::after,
+				.set__plus::before {
+					animation: pulse 2.5s linear infinite;
+				}
+			}
+
+			&.active {
+				.set__hint-text {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				.set__plus::after,
+				.set__plus::before {
+					animation: none;
+				}
+			}
+
+			&:nth-child(1) {
+				top: 3.5rem;
+				left: 13.3rem;
+			}
+
+			&:nth-child(3) {
+				top: 10.6rem;
+				left: 1.7rem;
+			}
+
+			&:nth-child(8) {
+				bottom: 2.2rem;
+				left: 8.6rem;
+			}
+
+			&:nth-child(9) {
+				bottom: 6.3rem;
+				left: 13rem;
+			}
+
+			&:nth-child(10) {
+				bottom: 5.3rem;
+				right: 2.2rem;
+
+				.set__hint-text {
+					left: auto;
+					right: 0;
+					padding: 0.5rem 2.2rem 0.5rem 0.7rem;
+				}
+			}
+
+			&:nth-child(13) {
+				bottom: 2.2rem;
+				right: -2.6rem;
+
+				.set__hint-text {
+					padding: 0.5rem 2.2rem 0.5rem 0.7rem;
+				}
+			}
+
+		}
+
+		&__plus {
+			width: 1.6rem;
+			height: 1.6rem;
+			font-size: 1rem;
+			line-height: 1.4rem;
+
+			&::after,
+			&::before {
+				top: -1rem;
+				bottom: -1rem;
+				left: -1rem;
+				right: -1rem;
+			}
+		}
+
+		&__hint-text {
+			padding: 0.5rem 0.7rem 0.5rem 2.2rem;
+			font-size: 0.7rem;
+			line-height: 0.85;
+		}
+	}
+}

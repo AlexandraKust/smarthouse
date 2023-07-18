@@ -1,0 +1,181 @@
+.catalog {
+	padding: 5.8rem 0;
+
+	&__row {
+		position: relative;
+		margin-right: -2rem;
+		padding: 7.9rem 5.7rem 7.8rem 10rem;
+		border-radius: 5rem;
+		overflow: hidden;
+		justify-content: space-between;
+		align-items: center;
+		background: url('../media/img/catalog.png') right bottom / 93.5rem auto no-repeat,
+			url('../media/img/catalog-bg.png') center center / 100% 100% no-repeat, $main-color;
+	}
+
+	&__text {
+		flex: 0 1 49.3rem;
+	}
+
+	&__overhead {
+		margin-bottom: 2.7rem;
+		font-size: 2rem;
+		line-height: 2.4rem;
+		color: #fff;
+	}
+
+	&__subtitle {
+		margin-bottom: 2.7rem;
+		color: #fff;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		color: #fff;
+		letter-spacing: 0.023em;
+	}
+
+	&__form {
+		flex: 0 0 45.7rem;
+		padding: 6.4rem 5rem 6rem;
+		border-radius: 5rem;
+		background-color: #fff;
+	}
+
+	&__select {
+		width: 100%;
+		margin-bottom: 3.5rem;
+
+		&.select .custom-select-opener {
+			padding: 4.5rem 3.2rem;
+		}
+	}
+
+	.input-wrap {
+		margin-bottom: 3.3rem;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 4.2rem 3.2rem;
+	}
+
+	&__btn {
+		width: 100%;
+	}
+
+	&__plate {
+		position: absolute;
+		top: 23.1rem;
+		left: 67.4rem;
+		width: 15rem;
+		height: 15rem;
+		padding: 3rem;
+		border-radius: 50%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		background-color: #fff;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 90%;
+			height: 90%;
+			transform: translate(-50%, -50%);
+			background: url('../media/svg/pdf.svg') 0 0 / 100% 100% no-repeat;
+			animation: spin 30s infinite linear;
+		}
+	}
+
+	&__icon {
+		width: 1.7rem;
+		height: 1.7rem;
+	}
+
+	&__date {
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		color: $accent-color;
+		text-align: center;
+		letter-spacing: 0.042rem;
+	}
+
+	#catalogDate {
+		line-height: 1.5rem;
+		letter-spacing: 0.014rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.catalog {
+		padding: 2.2rem 0;
+
+		&__row {
+			margin-right: 0;
+			padding: 2.4rem 2.4rem 23.4rem;
+			border-radius: 3.6rem;
+			flex-direction: column;
+			gap: 3.2rem;
+			background: url('../media/img/catalog-bg-mob.jpg') center 0 / cover no-repeat;
+		}
+
+		&__text {
+			flex-basis: auto;
+			width: 100%;
+		}
+
+		&__overhead {
+			margin-bottom: 1rem;
+			font-size: 1rem;
+			line-height: 1.4rem;
+		}
+
+		&__subtitle {
+			margin-bottom: 1rem;
+		}
+
+		&__title {
+			letter-spacing: 0;
+		}
+
+		&__form {
+			flex-basis: auto;
+			width: auto;
+			margin: 0 -1.7rem;
+			padding: 1.6rem;
+			border-radius: 2rem;
+		}
+
+		&__select {
+			margin-bottom: 2.3rem;
+
+			&.select .custom-select-opener {
+				padding: 1.8rem 2rem;
+			}
+		}
+
+		.input-wrap {
+			margin-bottom: 2rem;
+		}
+
+		&__input {
+			padding: 2.1rem 2rem;
+		}
+
+		&__btn {
+			font-size: 1.2rem;
+		}
+
+		&__plate {
+			display: none;
+		}
+	}
+}

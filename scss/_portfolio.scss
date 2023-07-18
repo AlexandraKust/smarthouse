@@ -1,0 +1,302 @@
+.portfolio {
+	padding: 11.8rem 0 5.8rem;
+
+	&__title .accent {
+		display: block;
+	}
+
+	&__subtitle {
+		margin-bottom: 8.1rem;
+	}
+
+	&__swiper {
+		margin-bottom: 7.7rem;
+		margin-right: -2rem;
+	}
+
+	&__slide {
+		position: relative;
+		width: 43.7rem;
+		height: 30.5rem;
+		display: flex;
+		align-items: end;
+		padding: 3rem 3.5rem;
+		border-radius: 3.5rem;
+		overflow: hidden;
+
+		&:not(:last-child) {
+			margin-right: 5.5rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.portfolio__img {
+				transform: scale(1.05);
+
+				&::after {
+					background-color: rgba(0, 0, 0, 0.6);
+				}
+			}
+
+			.portfolio__play {
+				box-shadow: 0 0 1.5rem rgba(221, 221, 221, 0.4);
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+		transition: transform 0.3s ease-in-out;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.4);
+			transition: background-color 0.3s ease-in-out;
+		}
+	}
+
+	&__play {
+		position: absolute;
+		top: 3rem;
+		left: 3.5rem;
+		z-index: 3;
+		width: 7.5rem;
+		height: 7.5rem;
+		border-radius: 50%;
+		border: 0.1rem solid #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.25);
+		transition-property: transform, background-color;
+		transition: 0.3s ease-in-out;
+
+		img {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		&:hover {
+			background-color: $accent-color;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 3rem;
+		right: 3.4rem;
+		z-index: 3;
+		width: 5rem;
+		height: 6rem;
+	}
+
+	&__name {
+		position: relative;
+		z-index: 3;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		color: $accent-color;
+	}
+
+	&__bottom {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__arrows {
+		gap: 1.3rem;
+
+		.slider-btn {
+			position: static;
+			background-color: transparent;
+			border: 0.1rem solid #efefef;
+
+			&.swiper-button-disabled {
+				path {
+					fill: $gray;
+				}
+			}
+
+			path {
+				fill: $main-color;
+			}
+
+
+			&:not(.swiper-button-disabled):hover {
+				background-color: $accent-color;
+				border-color: transparent;
+
+				path {
+					fill: #fff;
+				}
+			}
+
+			&:not(.swiper-button-disabled):active {
+				background-color: darken($accent-color, 10%);
+				border-color: transparent;
+
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	&__link {
+		position: relative;
+		margin-right: 1rem;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: #000;
+		transition: color 0.3s ease-in-out;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 0.1rem;
+			background-color: currentColor;
+			transition: width 0.3s ease-in-out;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -2.5rem;
+			top: 50%;
+			transform: translateY(-50%) rotate(-90deg);
+			width: 1.5rem;
+			height: 1.5rem;
+			background: url('../media/svg/arrow.svg') 0 0 / 100% 100% no-repeat;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		&:hover {
+			color: $main-color;
+
+			&::before {
+				width: 80%;
+			}
+
+			&::after {
+				transform: translateY(-50%) rotate(-135deg);
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.portfolio {
+		padding: 4.4rem 0 2.2rem;
+
+		&__subtitle {
+			margin-bottom: 3.2rem;
+		}
+
+		&__swiper {
+			margin: 0 -3.7rem 1.4rem;
+			padding: 0 3.7rem;
+		}
+
+		&__slide {
+			width: 100%;
+			height: 18rem;
+			padding: 2.8rem;
+
+			&:not(:last-child) {
+				margin-right: 3.7rem;
+			}
+		}
+
+		&__play {
+			top: 2.8rem;
+			left: 2.8rem;
+			width: 5.7rem;
+			height: 5.7rem;
+
+			img {
+				width: 1.1rem;
+				height: 1.1rem;
+			}
+		}
+
+		&__logo {
+			top: 2.8rem;
+			right: 2.8rem;
+			width: 3.8rem;
+			height: 4.6rem;
+		}
+
+		&__name {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+
+		&__bottom {
+			flex-wrap: wrap;
+			gap: 1.4rem;
+		}
+
+		&__arrows {
+			width: 100%;
+			gap: 0.8rem;
+		}
+
+		&__link {
+			max-width: 17.5rem;
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+
+			&:active {
+				span:last-child::before {
+					width: 40%;
+				}
+			}
+
+			span {
+				position: relative;
+				display: block;
+				width: fit-content;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0.2rem;
+					width: 100%;
+					height: 0.1rem;
+					background-color: currentColor;
+					transition: width 0.3s ease-in-out;
+				}
+			}
+
+			&::before {
+				display: none;
+			}
+
+			&::after {
+				right: -3.2rem;
+				width: 1.7rem;
+				height: 1.7rem;
+			}
+		}
+	}
+}

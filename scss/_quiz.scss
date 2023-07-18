@@ -509,7 +509,7 @@
 
 @media (max-width: 768px) {
 	.quiz {
-		padding: 2.2rem 0;
+		padding: 2rem 0 2.2rem;
 
 		&__subtitle {
 			margin-bottom: 3.2rem;
@@ -543,7 +543,7 @@
 		}
 
 		&__progress {
-			margin-bottom: 2.4rem;
+			margin-bottom: 2.3rem;
 		}
 
 		&__progress-bar {
@@ -590,7 +590,7 @@
 
 	.quiz-item {
 		&__title {
-			margin-bottom: 2.4rem;
+			margin-bottom: 2.3rem;
 			font-size: 1.6rem;
 			line-height: 150%;
 			text-align: center;

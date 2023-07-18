@@ -8,6 +8,7 @@ let nav = document.querySelector('.nav');
 // }, 1000)
 
 $('.section-title').not('h1').not('.no-anim').addClass('animation');
+$('.section-subtitle').not('.no-anim').addClass('animation');
 setTimeout(function () {
 	$('.hero-title').addClass('visible');
 }, 500)
@@ -473,9 +474,44 @@ if (inputCount) {
 	})
 }
 
+// stock sliders
+let stockSwipers = document.querySelectorAll('.stock__main-swiper');
+stockSwipers.forEach(item => {
+	let stockThumbs = item.parentNode.querySelector('.stock__swiper');
+
+	var stockThumb = new Swiper(stockThumbs, {
+		loop: false,
+		speed: 600,
+		centeredSlides: false,
+		touchRatio: 1,
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+
+	var stockSwiper = new Swiper(item, {
+		loop: false,
+		speed: 600,
+		centeredSlides: false,
+		touchRatio: 1,
+		slidesPerView: 'auto',
+		freeMode: true,
+
+		navigation: {
+			nextEl: item.querySelector('.slider-btn--next'),
+			prevEl: item.querySelector('.slider-btn--prev'),
+		},
+		thumbs: {
+			swiper: stockThumb,
+		},
+	});
+})
+
 // слайдеры
-let swipers = document.querySelectorAll('.swiper');
-swipers.forEach(function (slider) {
+let portfolioSlider = document.querySelector('.portfolio__swiper');
+if (portfolioSlider) initSwiper(portfolioSlider);
+
+function initSwiper(slider) {
 	let swiper = new Swiper(slider, {
 		loop: false,
 		speed: 600,
@@ -494,7 +530,8 @@ swipers.forEach(function (slider) {
 			clickable: true,
 		},
 	});
-})
+}
+
 
 
 // анимация подгрузки контента при скролле
@@ -660,5 +697,54 @@ var months = [
 
 var itsNow = new Date();
 let monthNow = months[itsNow.getMonth()].toLowerCase();
-let offerMonth = document.querySelector('.singup__month');
-if (offerMonth) offerMonth.innerHTML = monthNow;
+let offerMonth = document.querySelector('.stock__now');
+let catalogDate = document.getElementById('catalogDate');
+if (offerMonth) offerMonth.innerHTML = 'Сегодня ' + itsNow.getDate() + ' ' + monthNow + ' ' + itsNow.getFullYear() + ' года';
+if (catalogDate) {
+	if (itsNow.getMonth() + 1 < 10) {
+		catalogDate.innerHTML = itsNow.getDate() + '.0' + (itsNow.getMonth() + 1) + '.' + itsNow.getFullYear();
+	} else {
+		catalogDate.innerHTML = itsNow.getDate() + '.' + (itsNow.getMonth() + 1) + '.' + itsNow.getFullYear();
+	}
+}
+
+let stock = document.getElementById('stock');
+if (stock) {
+	let completed = stock.getElementsByClassName('status-completed');
+	let built = stock.getElementsByClassName('status-built');
+
+	let builtDescr;
+	if (built.length === 1) {
+		builtDescr = ' дом'
+	} else if (built.length < 5 && built.length > 0) {
+		builtDescr = ' дома'
+	} else {
+		builtDescr = ' домов'
+	}
+	document.getElementById('endSum').innerHTML = completed.length;
+	document.getElementById('builtSum').innerHTML = built.length + builtDescr;
+
+	let btnMore = stock.querySelector('.stock__more');
+
+	btnMore.addEventListener('click', function () {
+		let stockListHidden = stock.querySelectorAll('.stock__item.hidden');
+		for (i = 0; i < 2; i++) {
+			stockListHidden[i].classList.remove('hidden');
+		}
+		if (stock.getElementsByClassName('stock__item hidden').length == 0) {
+			btnMore.style.display = "none"
+		}
+	})
+}
+
+
+let setHint = document.querySelectorAll('.set__hint');
+let hintActive = document.getElementsByClassName('set__hint active');
+
+Array.from(setHint).forEach(function (item) {
+	item.addEventListener('click', function (e) {
+		if (hintActive.length > 0 && hintActive[0] !== this) hintActive[0].classList.remove('active');
+
+		this.classList.toggle('active');
+	});
+});

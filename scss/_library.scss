@@ -57,13 +57,19 @@ h1 {
 	}
 }
 
-@keyframes radial-pulse {
+@keyframes pulse {
 	0% {
-		box-shadow: 0 0 0 0 rgba($color: $accent-color, $alpha: 0.5);
+		transform: scale(0.5);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
 	}
 
 	100% {
-		box-shadow: 0 0 0 1rem rgba(207, 241, 207, 0);
+		transform: scale(1);
+		opacity: 0;
 	}
 }
 
@@ -80,6 +86,28 @@ h1 {
 @keyframes load {
 	to {
 		transform: rotate(1turn)
+	}
+}
+
+@keyframes stockMoving {
+	from {
+		transform: translateY(7.5rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
 
@@ -211,12 +239,14 @@ h1 {
 	line-height: 10rem;
 	text-transform: uppercase;
 	color: $main-color;
+	letter-spacing: 0.01em;
 }
 
 .section-subtitle {
 	font-size: 3.2rem;
 	line-height: 3.8rem;
 	color: $main-color;
+	letter-spacing: 0.01em;
 }
 
 
@@ -255,7 +285,8 @@ h1 {
 
 		&:not(:disabled):hover {
 			color: $main-color;
-			border-color: $main-color;
+			// border-color: $main-color;
+			border-color: $accent-color;
 		}
 	}
 
@@ -340,7 +371,6 @@ h1 {
 			opacity: 0;
 		}
 	}
-
 
 	&.disabled,
 	&:disabled {
@@ -520,6 +550,7 @@ h1 {
 .slider-btn {
 	position: absolute;
 	z-index: 5;
+	left: 0;
 	width: 5rem;
 	height: 5rem;
 	border-radius: 50%;
@@ -529,22 +560,14 @@ h1 {
 	transition: background-color 0.3s ease-in-out;
 	background-color: $accent-color;
 
-	&--prev {
-		left: 0;
-	}
-
-	&--next {
-		right: 0;
-	}
-
 	path {
 		fill: $main-color;
 		transition: fill 0.3s ease-in-out;
 	}
 
 	svg {
-		width: 1.2rem;
-		height: 1.2rem;
+		width: 1.4rem;
+		height: 1.4rem;
 	}
 
 	&:hover {
@@ -772,6 +795,10 @@ h1 {
 		}
 	}
 
+	.main {
+		padding-bottom: 10.3rem;
+	}
+
 	.desktop {
 		display: none !important;
 	}
@@ -794,11 +821,13 @@ h1 {
 		margin-bottom: 1rem;
 		font-size: 3.2rem;
 		line-height: 4.2rem;
+		letter-spacing: 0;
 	}
 
 	.section-subtitle {
 		font-size: 1.6rem;
 		line-height: 2.2rem;
+		letter-spacing: 0;
 	}
 
 	.main-btn {
@@ -809,12 +838,8 @@ h1 {
 		}
 
 		&--blue {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			line-height: 1.6rem;
-		}
-
-		&--white {
-			font-size: 1.2rem;
 		}
 
 		&--transparent {
