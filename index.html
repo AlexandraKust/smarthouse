@@ -2032,6 +2032,419 @@
 					</div>
 				</section>
 
+				<!-- экскурсия -->
+				<section class="excursion">
+					<div class="container">
+						<div class="excursion__body flex">
+							<div class="excursion__text">
+								<p class="excursion__overhead">Не верите на слово?</p>
+								<p class="excursion__subtitle section-subtitle">Запишитесь на экскурсию в&nbsp;удобное время, чтобы</p>
+								<h2 class="excursion__title section-title">Не спеша <span class="accent">осмотреть дома</span></h2>
+								<p class="excursion__subtitle section-subtitle">
+									Закроем все возражения и
+									вопросы, все объясним и
+									покажем на одной встрече
+								</p>
+							</div>
+							<form action="mailer/send.php" method="POST" class="excursion__form" data-form-validate-js="">
+								<input type="hidden" name="formname" value="excursion">
+								<p class="excursion__form-title">Оставьте только номер телефона и мы согласуем дату для экскурсии</p>
+								<label class="excursion__label label">Какое время будет вам удобно?</label>
+								<input type="datetime-local" id="excursionNow" class="excursion__date input" required />
+								<input type="hidden" name="excursionDate" id="excursionDate">
+								<label class="excursion__label label">Введите номер телефона</label>
+								<div class="input-wrap">
+									<input type="tel" name="phone" class="excursion__input input" placeholder="+7(___) ___ - __ - __">
+								</div>
+								<button class="excursion__btn main-btn main-btn--blue">
+									<span class="btn-blick"></span>
+									<span class="main-btn__text">Записаться на экскурсию</span>
+								</button>
+							</form>
+						</div>
+
+						<p class="excursion__middle-title">На экскурсии:</p>
+						<div class="excursion__hint flex mobile">
+							<div class="excursion__hint-icon">
+								<img src="media/svg/pointer.svg" alt="">
+							</div>
+							<p class="excursion__hint-text">Листайте, чтобы увидеть дальше</p>
+						</div>
+						<ul class="excursion__row flex">
+							<li class="excursion__item flex">
+								<div class="excursion__icon">
+									<img src="media/svg/house-2.svg" alt="">
+								</div>
+								<div class="excursion__info">
+									<p class="excursion__name">Познакомитесь с технологией строительства</p>
+									<p class="excursion__descr">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+								</div>
+							</li>
+							<li class="excursion__item flex">
+								<div class="excursion__icon">
+									<img src="media/svg/like.svg" alt="">
+								</div>
+								<div class="excursion__info">
+									<p class="excursion__name">Оцените качество материалов</p>
+									<p class="excursion__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nobis.</p>
+								</div>
+							</li>
+							<li class="excursion__item flex">
+								<div class="excursion__icon">
+									<img src="media/svg/puzzle.svg" alt="">
+								</div>
+								<div class="excursion__info">
+									<p class="excursion__name">Посмотрите на дом на разных этапах строительства</p>
+									<p class="excursion__descr">т.к. мы строим 3-4 дома одновременно и они находятся на разных этапах
+										строительства</p>
+								</div>
+							</li>
+							<li class="excursion__item flex">
+								<div class="excursion__icon">
+									<img src="media/svg/msg.svg" alt="">
+								</div>
+								<div class="excursion__info">
+									<p class="excursion__name">Получите ответы на все интресующие вопросы</p>
+									<p class="excursion__descr">Lorem ipsum dolor sit amet.</p>
+								</div>
+							</li>
+							<li class="excursion__item flex">
+								<div class="excursion__icon">
+									<img src="media/svg/people.svg" alt="">
+								</div>
+								<div class="excursion__info">
+									<p class="excursion__name">Познакомитесь с нашими заказчиками, которые уже живут в поселке</p>
+									<p class="excursion__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde!</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- гарантии -->
+				<section class="warranty">
+					<div class="container">
+						<h2 class="warranty__title section-title">
+							<span class="accent">вы можете полностью</span>
+							нам дове&shy;риться
+						</h2>
+						<p class="warranty__subtitle section-subtitle">
+							и быть спокойны за качество и сроки стройки, ведь наша
+							компания Smart House на рынке уже более 10 лет
+						</p>
+						<div class="warranty__body flex">
+							<a href="#" class="warranty__video flex" data-fancybox="warranty-video">
+								<div class="warranty__play">
+									<img src="media/svg/play.svg" alt="">
+								</div>
+								<div class="warranty__img">
+									<img src="media/img/warranty-man.jpg" alt="">
+								</div>
+								<div class="warranty__plate">
+									<p class="warranty__fio"> Анатолий Николаевич </p>
+									<p class="warranty__job">Генеральный директор SMART HOUSE</p>
+								</div>
+								<p class="warranty__info">
+									Посмотрите видео
+									о&nbsp;нашей компании
+								</p>
+							</a>
+							<ul class="warranty__list flex">
+								<li class="warranty__item">
+									<p class="warranty__name">Соблюдаем<br> сроки</p>
+									<p class="warranty__descr">
+										За счёт отлаженной логистики и закупки материала у поставщиков проверенных временем
+									</p>
+								</li>
+								<li class="warranty__item">
+									<p class="warranty__name">Фиксированная стоимость</p>
+									<p class="warranty__descr">Стоимость строительства не увеличивается в процессе, смета фиксированная
+									</p>
+								</li>
+								<li class="warranty__item">
+									<p class="warranty__name">Используем железобетонные сваи</p>
+									<p class="warranty__descr">
+										Вбиваем максимально прочно, с частым шагом, что гарантирует отсутствие провисания/скрипа пола
+									</p>
+								</li>
+								<li class="warranty__item">
+									<p class="warranty__name">Контроль всех этапов директором по строительству</p>
+									<p class="warranty__descr">
+										Не переходим к следующему этапу, пока не принят и не зафиксирован в фотоотчете предыдущий
+									</p>
+								</li>
+								<li class="warranty__item">
+									<p class="warranty__name">Профессиональ&shy;ные строители</p>
+									<p class="warranty__descr">
+										Штат местных официально-оформленных специалистов, которые знают свое дело
+									</p>
+								</li>
+								<li class="warranty__item">
+									<p class="warranty__name">Качественные материалы</p>
+									<p class="warranty__descr">
+										Антисептированные строганые материалы хвойных пород камерной сушки
+									</p>
+								</li>
+							</ul>
+							<div class="warranty__banner">
+								<p class="warranty__contract">
+									Все гарантии, сроки и стоимость прописываем в&nbsp;договоре
+								</p>
+								<p class="warranty__date">5 <span>лет</span></p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ипотека -->
+				<section class="hypothec">
+					<div class="container">
+						<h2 class="hypothec__title section-title">
+							<span class="accent">ипотека без</span>
+							первона&shy;чального взноса
+						</h2>
+						<p class="hypothec__subtitle section-subtitle">
+							Поможем в оформлении ипотеки при испорченной кредитной истории и отсутствии первоначального взноса не
+							завышая стоимость дома
+						</p>
+
+						<div class="hypothec__body flex">
+							<ul class="hypothec__column flex">
+								<li class="hypothec__item">
+									<div class="hypothec__front flex">
+										<p class="hypothec__name">
+											<b>100% оплата</b><br>
+											Наличный и безналичный расчёт
+										</p>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.43244 1.01006L0.826709 8.61579L0 7.78908L7.60573 0.183355L8.43244 1.01006Z" />
+												<path d="M4.67454 0V1.12531H7.46531V3.91608H8.59063V1.45083e-08L4.67454 0Z" />
+											</svg>
+										</div>
+									</div>
+									<div class="hypothec__back flex">
+										<div class="hypothec__text">
+											<p>Передача наличных происходит в отделении банка.</p>
+											<p>Безопасная сделка через аккредитив в Сбербанке</p>
+										</div>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01199 3.25047L13.0077 3.25047L13.0077 4.55435L1.01199 4.55435L1.01199 3.25047Z" />
+												<path
+													d="M3.17891 7.01046L4.06633 6.12304L1.86554 3.92225L4.06633 1.72146L3.17891 0.83405L0.0907106 3.92225L3.17891 7.01046Z" />
+											</svg>
+										</div>
+									</div>
+								</li>
+								<li class="hypothec__item">
+									<div class="hypothec__front flex">
+										<p class="hypothec__name">
+											Кредит на строительство дома
+											<b>от&nbsp;4,9 годовых</b>
+										</p>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.43244 1.01006L0.826709 8.61579L0 7.78908L7.60573 0.183355L8.43244 1.01006Z" />
+												<path d="M4.67454 0V1.12531H7.46531V3.91608H8.59063V1.45083e-08L4.67454 0Z" />
+											</svg>
+										</div>
+									</div>
+									<div class="hypothec__back flex">
+										<div class="hypothec__text">
+											<p>Максимальная сумма кредита для регионов — 6 млн. руб.</p>
+											<p>Максимальный срок кредитования — 7 лет</p>
+											<p>Первоначальный взнос — 10%</p>
+										</div>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01199 3.25047L13.0077 3.25047L13.0077 4.55435L1.01199 4.55435L1.01199 3.25047Z" />
+												<path
+													d="M3.17891 7.01046L4.06633 6.12304L1.86554 3.92225L4.06633 1.72146L3.17891 0.83405L0.0907106 3.92225L3.17891 7.01046Z" />
+											</svg>
+										</div>
+									</div>
+								</li>
+								<li class="hypothec__item">
+									<div class="hypothec__front flex">
+										<p class="hypothec__name">
+											<b>Материнский капитал</b>
+										</p>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.43244 1.01006L0.826709 8.61579L0 7.78908L7.60573 0.183355L8.43244 1.01006Z" />
+												<path d="M4.67454 0V1.12531H7.46531V3.91608H8.59063V1.45083e-08L4.67454 0Z" />
+											</svg>
+										</div>
+									</div>
+									<div class="hypothec__back flex">
+										<div class="hypothec__text">
+											<p>
+												Строим дома в ипотеку от 4,5%,<br>
+												принимаем материнский капитал
+											</p>
+										</div>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01199 3.25047L13.0077 3.25047L13.0077 4.55435L1.01199 4.55435L1.01199 3.25047Z" />
+												<path
+													d="M3.17891 7.01046L4.06633 6.12304L1.86554 3.92225L4.06633 1.72146L3.17891 0.83405L0.0907106 3.92225L3.17891 7.01046Z" />
+											</svg>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="hypothec__row flex">
+								<li class="hypothec__card">
+									<div class="hypothec__front flex">
+										<div class="hypothec__icon">
+											<img src="media/svg/sber.svg" alt="">
+										</div>
+										<p class="hypothec__name">
+											Льготная ипотечная программа
+											<b>от 5,3% годовых</b>
+										</p>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.43244 1.01006L0.826709 8.61579L0 7.78908L7.60573 0.183355L8.43244 1.01006Z" />
+												<path d="M4.67454 0V1.12531H7.46531V3.91608H8.59063V1.45083e-08L4.67454 0Z" />
+											</svg>
+										</div>
+									</div>
+									<div class="hypothec__back flex">
+										<div class="hypothec__text">
+											<p>
+												Мы являемся официальным партнером ПАО Сбербанк. Аккредитованы, в качестве подрядной организации,
+												на строительство жилого дома
+											</p>
+											<p class="hypothec__minititle">Программа:</p>
+											<ul>
+												<li>Максимальная сумма кредита для регионов — 6 млн. руб.</li>
+												<li>Максимальный срок кредитования — 20 лет</li>
+												<li>Первоначальный взнос — 20%</li>
+											</ul>
+										</div>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01199 3.25047L13.0077 3.25047L13.0077 4.55435L1.01199 4.55435L1.01199 3.25047Z" />
+												<path
+													d="M3.17891 7.01046L4.06633 6.12304L1.86554 3.92225L4.06633 1.72146L3.17891 0.83405L0.0907106 3.92225L3.17891 7.01046Z" />
+											</svg>
+										</div>
+									</div>
+								</li>
+								<li class="hypothec__card">
+									<div class="hypothec__front flex">
+										<div class="hypothec__icon">
+											<img src="media/svg/family.svg" alt="">
+										</div>
+										<p class="hypothec__name">
+											Семейная ипотека по ИЖС <b>от 4,6% годовых</b>
+										</p>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.43244 1.01006L0.826709 8.61579L0 7.78908L7.60573 0.183355L8.43244 1.01006Z" />
+												<path d="M4.67454 0V1.12531H7.46531V3.91608H8.59063V1.45083e-08L4.67454 0Z" />
+											</svg>
+										</div>
+									</div>
+									<div class="hypothec__back flex">
+										<div class="hypothec__text">
+											<ul>
+												<li>Максимальная сумма кредита для регионов — 6 млн. руб.</li>
+												<li>Максимальный срок кредитования — 20 лет</li>
+												<li>Первоначальный взнос — от 15 %</li>
+											</ul>
+											<p class="hypothec__minititle">Дополнительные программы:</p>
+											<ul>
+												<li>Материнский капитал</li>
+												<li>Выплата до 450 тыс. рублей</li>
+												<li>Первоначальный взнос от 15 %</li>
+												<li>Для многодетных семей на погашение ипотеки</li>
+											</ul>
+										</div>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01199 3.25047L13.0077 3.25047L13.0077 4.55435L1.01199 4.55435L1.01199 3.25047Z" />
+												<path
+													d="M3.17891 7.01046L4.06633 6.12304L1.86554 3.92225L4.06633 1.72146L3.17891 0.83405L0.0907106 3.92225L3.17891 7.01046Z" />
+											</svg>
+										</div>
+									</div>
+								</li>
+								<li class="hypothec__card">
+									<div class="hypothec__front flex">
+										<div class="hypothec__icon">
+											<img src="media/img/rural.png" alt="">
+										</div>
+										<p class="hypothec__name">
+											Сельская ипотека
+											<b>всего от 3% годовых</b>
+										</p>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.43244 1.01006L0.826709 8.61579L0 7.78908L7.60573 0.183355L8.43244 1.01006Z" />
+												<path d="M4.67454 0V1.12531H7.46531V3.91608H8.59063V1.45083e-08L4.67454 0Z" />
+											</svg>
+										</div>
+									</div>
+									<div class="hypothec__back flex">
+										<div class="hypothec__text">
+											<ul>
+												<li>Максимальная сумма кредита для регионов — 3 млн. руб.</li>
+												<li>Супруги с под. доходом - 6 млн руб (только на приобретение готового жилья)</li>
+												<li>Максимальный срок кредитования — 25 лет</li>
+												<li>Первоначальный взнос — 10%</li>
+											</ul>
+											<p class="hypothec__minititle">Требования:</p>
+											<ul>
+												<li>жилой дом с коммуникациями, фундамент, бетон, кирпич, камень</li>
+												<li>земельный участок любого назначения (исключение - бизнес и промышленные цели)</li>
+												<li>стройка ИЖС, аккредитованной подрядной организацией</li>
+												<li>принадлежность к сельской территории по списку Мин.Сельхоза</li>
+											</ul>
+										</div>
+										<div class="hypothec__arrow flex">
+											<svg viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01199 3.25047L13.0077 3.25047L13.0077 4.55435L1.01199 4.55435L1.01199 3.25047Z" />
+												<path
+													d="M3.17891 7.01046L4.06633 6.12304L1.86554 3.92225L4.06633 1.72146L3.17891 0.83405L0.0907106 3.92225L3.17891 7.01046Z" />
+											</svg>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<p class="hypothec__comment">
+							Возможна поэтапная оплата и персональная рассрочка при покупке дома на этапе строительства
+						</p>
+						<form action="mailer/send.php" method="POST" class="hypothec__form flex" data-form-validate-js>
+							<input type="hidden" name="formname" value="hypothec">
+							<p class="hypothec__form-title">
+								Только номер
+								телефона и
+								мы в деле
+							</p>
+							<div class="hypothec__wrap flex">
+								<label class="hypothec__label label">Введите номер телефона</label>
+								<div class="input-wrap">
+									<input type="tel" name="phone" class="hypothec__input input" placeholder="+7(___)___-__-__">
+								</div>
+								<div class="hypothec__agree agree">
+									<div class="agree__checkbox"></div>
+									<p class="agree__text">
+										Согласен с условиями <span class="agree__link conf">политики конфиденциальности</span> данных
+									</p>
+								</div>
+							</div>
+							<button class="hypothec__btn main-btn main-btn--blue">
+								<span class="btn-blick"></span>
+								<span class="main-btn__text">Оставить заявку</span>
+							</button>
+						</form>
+					</div>
+				</section>
+
 
 				<!-- <section class="">
 					<div class="container">

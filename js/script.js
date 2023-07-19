@@ -737,7 +737,6 @@ if (stock) {
 	})
 }
 
-
 let setHint = document.querySelectorAll('.set__hint');
 let hintActive = document.getElementsByClassName('set__hint active');
 
@@ -748,3 +747,46 @@ Array.from(setHint).forEach(function (item) {
 		this.classList.toggle('active');
 	});
 });
+
+// блок экскурсия
+let excursionNow = document.getElementById('excursionNow');
+if (excursionNow) {
+	if (itsNow.getMonth() + 1 < 10) {
+		excursionNow.value = itsNow.getFullYear() + '-0' + (itsNow.getMonth() + 1) + '-' + (itsNow.getDate() + 1) + 'T' + '13:00';
+		excursionNow.min = itsNow.getFullYear() + '-0' + (itsNow.getMonth() + 1) + '-' + (itsNow.getDate() + 1) + 'T' + '10:00';
+	} else {
+		excursionNow.value = itsNow.getFullYear() + '-' + (itsNow.getMonth() + 1) + '-' + (itsNow.getDate() + 1) + 'T' + '13:00';
+		excursionNow.min = itsNow.getFullYear() + '-' + (itsNow.getMonth() + 1) + '-' + (itsNow.getDate() + 1) + 'T' + '10:00';
+	}
+
+	let excursionDate = document.getElementById('excursionDate');
+	changeData();
+
+	excursionNow.addEventListener('change', changeData);
+
+	function changeData() {
+		let value = excursionNow.value;
+		excursionDate.value = 'Дата: ' + value.slice(8, 10) + '.' + value.slice(5, 7) + '.' + value.slice(0, 4) + ' Время: ' + value.slice(11);
+	}
+}
+
+let excursionCard = document.querySelectorAll('.excursion__item');
+excursionCard.forEach(card => {
+	card.addEventListener('click', function () {
+		card.classList.toggle('active');
+	})
+})
+
+let hupothecItem = document.querySelectorAll('.hypothec__item');
+hupothecItem.forEach(item => {
+	item.addEventListener('click', function () {
+		item.classList.toggle('active');
+	})
+})
+
+let hupothecCard = document.querySelectorAll('.hypothec__card');
+hupothecCard.forEach(card => {
+	card.addEventListener('click', function () {
+		card.classList.toggle('active');
+	})
+})

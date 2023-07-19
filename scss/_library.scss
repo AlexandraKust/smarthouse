@@ -79,7 +79,7 @@ h1 {
 	}
 
 	100% {
-		transform: scale(1.2);
+		transform: scale(1.1);
 	}
 }
 
@@ -521,8 +521,20 @@ h1 {
 		border: 0.1rem solid $accent-color;
 		cursor: pointer;
 
+		&::after {
+			content: '';
+			width: 0.6rem;
+			height: 0.4rem;
+			background: url('../media/svg/check.svg') 0 0 / 100% 100% no-repeat;
+			opacity: 0;
+		}
+
 		&.check {
 			background: $accent-color;
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -897,19 +909,19 @@ h1 {
 			flex: 0 0 1.4rem;
 			width: 1.4rem;
 			height: 1.4rem;
-			margin-right: 1.5rem;
-			border-radius: 0.4rem;
+			margin-right: 0.9rem;
+			border-radius: 0.1rem;
 
 			&::after {
-				width: 0.5rem;
+				width: 0.6rem;
 				height: 0.4rem;
 			}
 		}
 
 		&__text,
 		&__link {
-			font-size: 1rem;
-			line-height: 1.5rem;
+			font-size: 0.8rem;
+			line-height: 1.2rem;
 		}
 	}
 

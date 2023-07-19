@@ -1,0 +1,302 @@
+.warranty {
+	padding: 6.4rem 0;
+
+	&__title {
+		letter-spacing: 0.013em;
+
+		.accent {
+			display: block;
+		}
+	}
+
+	&__subtitle {
+		max-width: 103rem;
+		margin-bottom: 6.7rem;
+		line-height: 4.4rem;
+	}
+
+	&__body {
+		margin-right: -2rem;
+		justify-content: space-between;
+	}
+
+	&__video {
+		position: relative;
+		flex: 0 0 54.8rem;
+		height: 71rem;
+		border-radius: 5rem;
+		overflow: hidden;
+		flex-wrap: wrap;
+		padding: 3.6rem 4.3rem 3.7rem 3.1rem;
+		transition: box-shadow 0.3s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.25), 0 0.6rem 1rem rgba(0, 0, 0, 0.22);
+		}
+	}
+
+	&__play {
+		position: relative;
+		z-index: 2;
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 0.1rem solid #fff;
+		background: rgba(0, 0, 0, 0.25);
+		transition: 0.3s ease-in-out;
+		margin-left: 1.3rem;
+		margin-right: auto;
+		animation: zoom .8s infinite alternate linear;
+		box-shadow: 0 0 2rem 0 rgba(255, 255, 255, .6);
+
+		img {
+			width: 1.6rem;
+			height: 1.8rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+			animation: none;
+			background-color: $accent-color;
+			border-color: $accent-color;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__plate {
+		position: relative;
+		z-index: 2;
+		width: min-content;
+		justify-self: flex-end;
+	}
+
+	&__fio {
+		margin-bottom: 1rem;
+		font-size: 1.6rem;
+		line-height: 2.3rem;
+		color: $main-color;
+	}
+
+	&__job {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+		color: $gray;
+	}
+
+	&__info {
+		position: relative;
+		z-index: 2;
+		align-self: flex-end;
+		max-width: 28rem;
+		font-size: 2.4rem;
+		line-height: 3.5rem;
+		color: #fff;
+	}
+
+	&__list {
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: 4.7rem;
+		row-gap: 3.8rem;
+	}
+
+	&__item {
+		flex: 0 0 22.8rem;
+
+		&:nth-child(5) {
+			.warranty__descr {
+				margin-right: -1rem;
+			}
+		}
+
+		&:nth-last-child(-n+2) {
+			align-self: end;
+		}
+	}
+
+	&__name {
+		margin-bottom: 2rem;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+
+	&__descr {
+		font-size: 1.5rem;
+		line-height: 2.3rem;
+		color: $gray;
+	}
+
+	&__banner {
+		flex: 0 0 25.5rem;
+		border-radius: 5rem;
+		overflow: hidden;
+		padding: 3.1rem 4.3rem;
+		background: url('../media/img/contract.png') center bottom / 100% auto no-repeat, $main-color;
+	}
+
+	&__contract {
+		margin-bottom: 2rem;
+		font-weight: 500;
+		font-size: 2.2rem;
+		line-height: 3rem;
+		color: #fff;
+	}
+
+	&__date {
+		position: relative;
+		display: block;
+		font-weight: 200;
+		font-size: 25rem;
+		line-height: 1;
+		color: #fff;
+
+		span {
+			position: absolute;
+			bottom: 7.7rem;
+			left: -1rem;
+			right: 0;
+			font-weight: 500;
+			font-size: 2.2rem;
+			line-height: 3rem;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.warranty {
+		padding: 2.2rem 0;
+
+		&__title {
+			letter-spacing: 0;
+		}
+
+		&__subtitle {
+			margin-bottom: 3rem;
+			line-height: 2.2rem;
+		}
+
+		&__body {
+			margin-right: 0;
+			flex-direction: column;
+			gap: 3.2rem;
+		}
+
+		&__video {
+			flex-basis: 32rem;
+			width: 100%;
+			height: 32rem;
+			border-radius: 3.6rem;
+			padding: 2.4rem 1.2rem 2.4rem 2.4rem;
+		}
+
+		&__play {
+			width: 5.7rem;
+			height: 5.7rem;
+			margin-left: -0.4rem;
+			margin-top: -0.4rem;
+
+			img {
+				width: 0.9rem;
+				height: 1rem;
+			}
+		}
+
+		&__fio {
+			margin-bottom: 0.4rem;
+			font-size: 1rem;
+			line-height: 1.2rem;
+		}
+
+		&__job {
+			font-size: 0.6rem;
+			line-height: 0.9rem;
+		}
+
+		&__info {
+			max-width: 16rem;
+			font-size: 1.6rem;
+			line-height: 2rem;
+		}
+
+		&__list {
+			column-gap: 1.9rem;
+			row-gap: 2rem;
+			justify-content: start;
+		}
+
+		&__item {
+			&:nth-child(odd) {
+				flex-basis: 10.7rem;
+			}
+
+			&:nth-child(even) {
+				flex-basis: 12rem;
+			}
+
+			&:nth-child(5) {
+				.warranty__descr {
+					margin-right: 0;
+				}
+			}
+
+			&:nth-last-child(-n+2) {
+				align-self: stretch;
+			}
+		}
+
+		&__name {
+			margin-bottom: 1.2rem;
+			font-size: 1.1rem;
+			line-height: 1.6rem;
+		}
+
+		&__descr {
+			font-size: 0.8rem;
+			line-height: 1.1rem;
+		}
+
+		&__banner {
+			width: 100%;
+			flex-basis: 58.1rem;
+			height: 58.1rem;
+			border-radius: 3.6rem;
+			padding: 4rem;
+			background-position: center calc(100% + 4.3rem);
+		}
+
+		&__contract {
+			margin-bottom: 6rem;
+			font-size: 1.6rem;
+			line-height: 2.2rem;
+		}
+
+		&__date {
+			left: -0.8rem;
+			font-size: 17.7rem;
+			text-align: center;
+
+			span {
+				bottom: 4.9rem;
+				left: 1rem;
+				font-size: 1.6rem;
+				line-height: 3rem;
+			}
+		}
+	}
+}
