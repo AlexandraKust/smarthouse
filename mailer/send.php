@@ -4,7 +4,8 @@ require 'class.smtp.php';
 
 // данные
 $phone = $_POST['phone'];
-$social = $_POST['social'];
+$select = $_POST['select'];
+$excursionDate = $_POST['excursionDate'];
 
 $question_1 = $_POST['title-1'];
 $answer_1 = $_POST["quiz1"];
@@ -12,11 +13,11 @@ $answer_1 = $_POST["quiz1"];
 $question_2 = $_POST['title-2'];
 $answer_2 = $_POST['quiz2'];
 
-$question_2_2 = $_POST['title-2_2'];
-$answer_2_2 = $_POST['quiz2_2'];
+$question_3_1 = $_POST['title-3_1'];
+$answer_3_1 = $_POST['quiz3_1'];
 
-$question_3 = $_POST['title-3'];
-$answer_3 = $_POST['quiz3'];
+$question_3_2 = $_POST['title-3_2'];
+$answer_3_2 = $_POST['quiz3_2'];
 
 $question_4 = $_POST['title-4'];
 $answer_4 = $_POST['quiz4'];
@@ -29,30 +30,57 @@ $answer_6 = $_POST['quiz6'];
 
 
 if ($_POST['formname'] == 'callback') {
-$msg = '
-Пользователь заказал обратный звонок. <br>
-Телефон: <b>' . $phone .' </b><br>
-';
-} else if ($_POST['formname'] == 'how') {
-$msg = '
-Пользователь скачал каталог "Топ-7 советов как выбрать систему отопления раз и навсегда" <br>
-Телефон: <b> ' . $phone .' </b><br>
-Способ связи: <b> ' . $social . ' </b>
-';
+	$msg = '
+	Пользователь заказал обратный звонок. 
+	Телефон: ' . $phone .' 
+	';
+} else if ($_POST['formname'] == 'catalog') {
+	$msg = '
+	Пользователь скачал каталог проектов квартала Family Village 
+	Телефон:  ' . $phone .' 
+	Способ связи:  ' . $select . ' 
+	';
+} else if ($_POST['formname'] == 'excursion') {
+	$msg = '
+	Пользователь оставил заявку на экскурсию. 
+	Когда будет удобно? Ответ: ' . $excursionDate . '
+	Телефон:  ' . $phone .' 
+	';
+} else if ($_POST['formname'] == 'hypothec') {
+	$msg = '
+	Пользователь оставил заявку на ипотеку. 
+	Телефон:  ' . $phone .' 
+	';
+} else if ($_POST['formname'] == 'certificate') {
+	$msg = '
+	Пользователь хочет получить сертификат на 100 000 рублей. 
+	Телефон:  ' . $phone .' 
+	';
+} else if ($_POST['formname'] == 'consultation') {
+	$msg = '
+	Пользователь оставил заявку на консультацию. 
+	Телефон:  ' . $phone .' 
+	';
+} else if ($_POST['formname'] == 'instruction') {
+	$msg = '
+	Пользователь скачал инструкцию "Топ-7 советов"
+	Телефон:  ' . $phone .' 
+	Способ связи:  ' . $select . ' 
+	';
 } else if ($_POST['formname'] == 'quiz') {
-$msg = '
-Пользователь прошёл тест: <br>
-1. ' . $question_1 . ' Ответ: <b>' . $answer_1 . ' </b><br>
-2.1. ' . $question_2 . ' Ответ: <b>' . $answer_2 . ' </b><br>
-2.2. ' . $question_2_2 . ' Ответ: <b>' . $answer_2_2 . ' </b><br>
-3. ' . $question_3 . ' Ответ: <b>' . $answer_3 . ' </b><br>
-4. ' . $question_4 . ' Ответ: <b>' . $answer_4 . ' </b><br>
-5. ' . $question_5 . ' Ответ: <b>' . $answer_5 . ' </b><br>
-6. ' . $question_6 . ' Ответ: <b>' . $answer_6 . ' </b><br>
-<br>
-Телефон: <b> ' . $phone .' </b><br>
-Способ связи: <b> ' . $social . ' </b>
-';
+	$msg = '
+	Пользователь прошёл тест: 
+	1. ' . $question_1 . ' Ответ: ' . $answer_1 . ' 
+	2. ' . $question_2 . ' Ответ: ' . $answer_2 . ' 
+	3.1. ' . $question_3_1 . ' Ответ: ' . $answer_3_1 . ' 
+	3.2. ' . $question_3_2 . ' Ответ: ' . $answer_3_2 . ' 
+	4. ' . $question_4 . ' Ответ: ' . $answer_4 . ' 
+	5. ' . $question_5 . ' Ответ: ' . $answer_5 . ' 
+	6. ' . $question_6 . ' Ответ: ' . $answer_6 . ' 
+
+	Телефон:  ' . $phone .' 
+	Способ связи:  ' . $select . ' 
+	';
 }
 
 // Настройки
@@ -65,12 +93,12 @@ $mail->Username = 'example@gmail.com'; //  логин
 $mail->Password = 'password'; //  пароль
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
-$mail->setFrom('formsajt987@gmail.com', 'Форма с сайта'); // Ваш Email
-$mail->addAddress('gmail@gmail.com'); // Email получателя
+$mail->setFrom('formsajt987@gmail.com', 'Форма с сайта SmartHouse'); // Ваш Email
+$mail->addAddress('mail@mail.com'); // Email получателя
 
 // Письмо
 $mail->isHTML(true);
-$mail->Subject = 'Форма с сайта '; // Заголовок письма
+$mail->Subject = 'Форма с сайта SmartHouse'; // Заголовок письма
 $mail->Body = $msg;
 
 // Проверяем отравленность сообщения

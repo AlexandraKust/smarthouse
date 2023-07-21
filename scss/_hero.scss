@@ -19,6 +19,13 @@
 		flex-direction: column;
 	}
 
+	&__overhead {
+		margin-bottom: 2.7rem;
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+		color: #fff;
+	}
+
 	&__title {
 		max-width: 98.1rem;
 		margin-bottom: 2.7rem;
@@ -48,9 +55,112 @@
 	}
 }
 
+.hero--thanks {
+	background: linear-gradient(208deg, rgba(2, 2, 61, 0.3) 0%, rgba(2, 2, 61, 0) 100%), url('../media/img/thanks-bg.jpg') center center / cover no-repeat;
+
+	.hero__row {
+		min-height: calc(100vh - 13.6rem);
+		height: auto;
+	}
+
+	.hero__subtitle {
+		margin-bottom: 2.7rem;
+	}
+}
+
+.hero--404 {
+	background-image: url('../media/img/404-bg.jpg');
+
+	&::after {
+		display: none;
+	}
+
+	.hero__row {
+		min-height: calc(100vh - 12.3rem);
+		height: auto;
+	}
+}
+
+.hero--lidmagnit {
+	background-image: url('../media/img/lidmagnit-bg.jpg');
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: -2rem;
+		right: -36rem;
+		width: 100.3rem;
+		height: 117%;
+		background: url('../media/img/popup-catalog-mobile.png') 0 0 / 100% 100% no-repeat;
+	}
+
+	.hero__row {
+		height: auto;
+		min-height: calc(100vh - 38rem);
+		padding: 11.3rem 0 9.2rem;
+		justify-content: center;
+	}
+
+	.hero__title {
+		max-width: 110rem;
+		letter-spacing: 0;
+	}
+}
+
+.hero--quiz {
+	min-height: 100vh;
+	margin-bottom: 5.5rem;
+	padding: 11.3rem 0 11.1rem;
+	background: linear-gradient(208deg, rgba(2, 2, 61, 0.3) 0%, rgba(2, 2, 61, 0) 100%),
+		url('../media/img/quiz-only-bg.jpg') center center / cover no-repeat;
+
+	&::after {
+		display: none;
+	}
+
+	.hero__row {
+		height: auto;
+		padding: 0;
+	}
+
+	.hero__title {
+		max-width: 95%;
+		letter-spacing: 0;
+	}
+
+	.hero__subtitle {
+		margin-bottom: 7.5rem;
+	}
+
+	.hero__btn {
+		margin-bottom: 7.5rem;
+		padding: 5.5rem 12.1rem;
+	}
+
+	.hero__conditions {
+		padding: 0;
+
+		.conditions__row {
+			margin-right: 0;
+		}
+
+		.conditions__item {
+			height: 25rem;
+			padding-bottom: 3.5rem;
+			border-color: rgba(239, 239, 239, 0.50);
+			background: rgba(0, 0, 0, 0.3);
+		}
+
+		.conditions__descr {
+			color: #fff;
+		}
+	}
+
+}
+
 @media (max-width: 768px) {
 	.hero {
-		background: url('../media/img/hero-bg-mob.jpg') center center /cover no-repeat;
+		background: url('../media/img/hero-bg-mob.jpg') center center / cover no-repeat;
 
 		&::after {
 			display: none;
@@ -59,6 +169,12 @@
 		&__row {
 			height: auto;
 			padding: 14.4rem 0 19.4rem;
+		}
+
+		&__overhead {
+			margin-bottom: 1rem;
+			font-size: 1.6rem;
+			line-height: 2.2rem;
 		}
 
 		&__title {
@@ -83,6 +199,93 @@
 			padding: 1.9rem 2.4rem;
 			font-size: 1.4rem;
 			line-height: 1.6rem;
+		}
+	}
+
+	.hero--thanks {
+		background: linear-gradient(208deg, rgba(2, 2, 61, 0.6) 0%, rgba(2, 2, 61, 0.00) 100%),
+			url('../media/img/thanks-bg.jpg') 70% 0 / auto 100% no-repeat;
+
+		.hero__row {
+			min-height: 100vh;
+			padding: 12rem 0 12rem;
+		}
+
+		.hero__subtitle {
+			margin-bottom: 1.5rem;
+		}
+
+		.hero__btn {
+			width: 100%;
+		}
+	}
+
+	.hero--404 {
+
+		.hero__row {
+			min-height: 100vh;
+			padding: 12rem 0 12rem;
+		}
+
+		.hero__subtitle {
+			margin-bottom: 1.5rem;
+		}
+
+		.hero__btn {
+			width: 100%;
+		}
+
+	}
+
+	.hero--lidmagnit {
+		background: url('../media/img/lidmagnit-bg.jpg') 0 0 / auto 100% no-repeat;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -2rem;
+			right: 0;
+			width: 100%;
+			height: 25rem;
+			background: url('../media/img/popup-catalog-mobile.png') 0 0 / 100% 100% no-repeat;
+		}
+
+		.hero__row {
+			height: auto;
+			min-height: calc(100vh - 38rem);
+			padding: 11.3rem 0 22rem;
+			justify-content: center;
+		}
+
+		.hero__title {
+			max-width: 110rem;
+			letter-spacing: 0;
+		}
+	}
+
+	.hero--quiz {
+		min-height: 100vh;
+		margin-bottom: 3rem;
+		padding: 11.3rem 0 5rem;
+		background: linear-gradient(208deg, rgba(2, 2, 61, 0.3) 0%, rgba(2, 2, 61, 0) 100%),
+			url('../media/img/quiz-only-bg.jpg') 0 0 / auto 100% no-repeat;
+
+
+		.hero__title {
+			max-width: 100%;
+		}
+
+		.hero__subtitle {
+			margin-bottom: 3.5rem;
+		}
+
+		.hero__btn {
+			margin-bottom: 3.5rem;
+			padding: 2.1rem 2rem;
+		}
+
+		.hero__conditions {
+			display: none;
 		}
 	}
 

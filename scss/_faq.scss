@@ -1,0 +1,265 @@
+.faq {
+	padding: 4.9rem 0;
+
+	&__body {
+		justify-content: space-between;
+		margin-right: -2rem;
+	}
+
+	&__head {
+		flex: 0 0 72rem;
+		padding-top: 0.3rem;
+		flex-direction: column;
+	}
+
+	&__subtitle {
+		flex: 1 1 auto;
+		margin-bottom: 15rem;
+	}
+
+	&__wa {
+		width: 35rem;
+		padding: 2.3rem 4.8rem;
+		align-items: center;
+		gap: 2.4rem;
+		border-radius: 50rem;
+		border: 0.1rem solid #39cb59;
+		background-color: #39cb59;
+		color: #fff;
+		transition-property: color, background-color;
+		transition: 0.3s ease-in-out;
+
+		svg {
+			flex-shrink: 0;
+			width: 3.4rem;
+			height: 3.3rem;
+		}
+
+		path {
+			fill: currentColor;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: #fff;
+			color: #39cb59;
+		}
+	}
+
+	&__link {
+		cursor: pointer;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: currentColor;
+	}
+
+	&__content {
+		flex: 0 0 51rem;
+		flex-direction: column;
+		gap: 6.8rem;
+		justify-content: space-between;
+	}
+
+	&__list {
+		width: 100%;
+		flex-direction: column;
+		gap: 5rem;
+
+		& .faq__item:nth-child(n+5) {
+			display: none;
+		}
+
+		&.active .faq__item:nth-child(n+5) {
+			display: block;
+		}
+	}
+
+	&__item {
+		padding-bottom: 1.4rem;
+		border-bottom: 0.1rem solid #dbdeeb;
+		animation: stockMoving .5s ease;
+
+		&.active {
+			.faq__question {
+				margin-bottom: 2rem;
+
+				&::after {
+					content: '-';
+				}
+			}
+		}
+	}
+
+	&__question {
+		position: relative;
+		width: 100%;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+		letter-spacing: 0.036em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: color 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+
+		&::after {
+			content: '+';
+			margin-left: 9.3rem;
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+			color: $accent-color;
+		}
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	&__answer {
+		max-height: 0;
+		overflow: hidden;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		letter-spacing: 0.03rem;
+		color: $gray;
+		transition: max-height 0.4s linear;
+	}
+
+	&__more {
+		position: relative;
+		width: fit-content;
+		margin-right: 1rem;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: #000;
+		transition: color 0.3s ease-in-out;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 0.1rem;
+			background-color: currentColor;
+			transition: width 0.3s ease-in-out;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: -2.5rem;
+			top: 50%;
+			transform: translateY(-50%) rotate(-90deg);
+			width: 1.5rem;
+			height: 1.5rem;
+			background: url('../media/svg/arrow.svg') 0 0 / 100% 100% no-repeat;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		&:hover {
+			color: $main-color;
+
+			&::before {
+				width: 80%;
+			}
+
+			&::after {
+				transform: translateY(-50%) rotate(-135deg);
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.faq {
+		padding: 2.2rem 0;
+
+		&__body {
+			position: relative;
+			margin-right: 0;
+			flex-wrap: wrap;
+			padding-bottom: 10.1rem;
+			justify-content: start;
+			gap: 3rem;
+		}
+
+		&__head {
+			flex-basis: 100%;
+		}
+
+		&__subtitle {
+			margin-bottom: 0;
+		}
+
+		&__wa {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 2rem 2.1rem;
+
+			svg {
+				width: 2.8rem;
+				height: 2.8rem;
+			}
+		}
+
+		&__link {
+			font-size: 1.4rem;
+			line-height: 1.7rem;
+		}
+
+		&__content {
+			flex-basis: 100%;
+			gap: 2.6rem;
+		}
+
+		&__list {
+			gap: 1.9rem;
+		}
+
+		&__item {
+			padding-bottom: 1.2rem;
+
+			&.active {
+				.faq__question {
+					margin-bottom: 1.2rem;
+				}
+			}
+		}
+
+		&__question {
+			font-size: 1.4rem;
+			line-height: 1.7rem;
+			letter-spacing: 0.028rem;
+			align-items: start;
+
+			&::after {
+				margin-left: 3.8rem;
+				font-size: 1.5rem;
+				line-height: 2rem;
+			}
+		}
+
+		&__answer {
+			font-size: 1rem;
+			line-height: 1.6rem;
+			letter-spacing: 0.02rem;
+			margin-right: -0.4rem;
+		}
+
+		&__more {
+			font-size: 1.2rem;
+			line-height: 1;
+
+			&::after {
+				right: -2.5rem;
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+	}
+}

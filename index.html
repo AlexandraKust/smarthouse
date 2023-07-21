@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
 		integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -120,17 +120,17 @@
 			</button>
 			<div class="nav__menu flex">
 				<ul class="nav__list">
-					<li class="nav__item"><a href="#" class="nav__link">О поселке</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Стоимость домов</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Экскурсия</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Преимущества</a></li>
+					<li class="nav__item"><a href="#quarter" class="nav__link">О поселке</a></li>
+					<li class="nav__item"><a href="#stock" class="nav__link">Стоимость домов</a></li>
+					<li class="nav__item"><a href="#portfolio" class="nav__link">Портфолио</a></li>
+					<li class="nav__item"><a href="#excursion" class="nav__link">Экскурсия</a></li>
+					<li class="nav__item"><a href="#benefits" class="nav__link">Преимущества</a></li>
 				</ul>
 				<ul class="nav__list">
-					<li class="nav__item"><a href="#" class="nav__link">О компании</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Вопрос-ответ</a></li>
-					<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+					<li class="nav__item"><a href="#warranty" class="nav__link">О компании</a></li>
+					<li class="nav__item"><a href="#feedback" class="nav__link">Отзывы</a></li>
+					<li class="nav__item"><a href="#faq" class="nav__link">Вопрос-ответ</a></li>
+					<li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
 				</ul>
 			</div>
 			<div class="nav__location flex">
@@ -139,12 +139,12 @@
 						Выберите коттеджный поселок
 					</p>
 					<div class="nav__select select">
-						<select name="select">
-							<option value="Санкт-Петербург и Ленобласть">
-								<a href="#" target="_blank">Санкт-Петербург и Ленобласть</a>
+						<select name="select" onchange="window.location.href=this.options[this.selectedIndex].value">
+							<option value="index.html">
+								Санкт-Петербург и Ленобласть
 							</option>
-							<option value="Москва и область">
-								<a href="#" target="_blank">Москва и область</a>
+							<option value="https://ya.ru/">
+								Москва и область
 							</option>
 						</select>
 					</div>
@@ -192,7 +192,7 @@
 						<ul class="conditions__row flex">
 							<li class="conditions__item flex">
 								<div class="conditions__icon">
-									<img src="media/svg/house.svg" alt="">
+									<img data-src="media/svg/house.svg" alt="">
 								</div>
 								<p class="conditions__descr">
 									Ипотека без первоначального взноса
@@ -200,7 +200,7 @@
 							</li>
 							<li class="conditions__item flex">
 								<div class="conditions__icon">
-									<img src="media/svg/rub.svg" alt="">
+									<img data-src="media/svg/rub.svg" alt="">
 								</div>
 								<p class="conditions__descr">
 									На 100% актуальные цены
@@ -208,7 +208,7 @@
 							</li>
 							<li class="conditions__item flex">
 								<div class="conditions__icon">
-									<img src="media/svg/shield.svg" alt="">
+									<img data-src="media/svg/shield.svg" alt="">
 								</div>
 								<p class="conditions__descr">
 									Гарантия&nbsp;на наши дома 5 лет
@@ -216,7 +216,7 @@
 							</li>
 							<li class="conditions__item flex">
 								<div class="conditions__icon">
-									<img src="media/svg/circle-arrow.svg" alt="">
+									<img data-src="media/svg/circle-arrow.svg" alt="">
 								</div>
 								<p class="conditions__descr">
 									Подходят для круглогодичного проживания
@@ -259,7 +259,7 @@
 														value="Готовый к заселению">
 													<div class="quiz-option__wrapper">
 														<div class="quiz-option__img">
-															<img src="media/img/quiz1-1.jpg" alt="">
+															<img data-src="media/img/quiz1-1.jpg" alt="">
 														</div>
 														<div class="quiz-option__wrap">
 															<div class="quiz-option__radio">
@@ -279,7 +279,7 @@
 														value="На стадии строительства">
 													<div class="quiz-option__wrapper">
 														<div class="quiz-option__img">
-															<img src="media/img/quiz1-2.jpg" alt="">
+															<img data-src="media/img/quiz1-2.jpg" alt="">
 														</div>
 														<div class="quiz-option__wrap">
 															<div class="quiz-option__radio">
@@ -299,7 +299,7 @@
 														value="Хочу строить с нуля">
 													<div class="quiz-option__wrapper">
 														<div class="quiz-option__img">
-															<img src="media/img/quiz1-3.jpg" alt="">
+															<img data-src="media/img/quiz1-3.jpg" alt="">
 														</div>
 														<div class="quiz-option__wrap">
 															<div class="quiz-option__radio">
@@ -543,7 +543,7 @@
 													<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-1" value="Подарок 1">
 													<div class="quiz-option__wrapper">
 														<div class="quiz-option__img">
-															<img src="media/img/gift-1.jpg" alt="">
+															<img data-src="media/img/gift-1.jpg" alt="">
 														</div>
 														<div class="quiz-option__wrap">
 															<div class="quiz-option__radio">
@@ -562,7 +562,7 @@
 													<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-2" value="Подарок 2">
 													<div class="quiz-option__wrapper">
 														<div class="quiz-option__img">
-															<img src="media/img/gift-1.jpg" alt="">
+															<img data-src="media/img/gift-1.jpg" alt="">
 														</div>
 														<div class="quiz-option__wrap">
 															<div class="quiz-option__radio">
@@ -607,7 +607,7 @@
 													</button>
 												</div>
 											</div>
-											<img class="quiz-item__image" src="media/img/quiz-screenshot.png"
+											<img class="quiz-item__image" data-src="media/img/quiz-screenshot.png"
 												alt="Скриншот из мессенджера с благодарностью о прохождении теста">
 										</div>
 									</div>
@@ -631,7 +631,7 @@
 								<div class="quiz__right quiz-right desktop">
 									<div class="quiz-right__manager">
 										<div class="quiz-right__photo">
-											<img src="media/img/quiz-manager.png" alt="">
+											<img data-src="media/img/quiz-manager.png" alt="">
 										</div>
 										<div class="quiz-right__name">
 											<p class="quiz-right__fio">Мария Филиппова,</p>
@@ -649,7 +649,7 @@
 				</section>
 
 				<!-- коттеджный квартал -->
-				<section class="quarter">
+				<section class="quarter" id="quarter">
 					<div class="container">
 						<div class="quarter__head flex">
 							<div class="quarter__text">
@@ -674,7 +674,7 @@
 									<picture>
 										<source srcset="media/img/quarter-1.webp" type="image/webp">
 										<source srcset="media/img/quarter-1.jpg" type="image/jpeg">
-										<img src="media/img/quarter-1.jpg" alt="">
+										<img data-src="media/img/quarter-1.jpg" alt="">
 									</picture>
 								</div>
 								<div class="quarter__info flex">
@@ -688,7 +688,7 @@
 							</div>
 							<div class="quarter__card flex">
 								<div class="quarter__icon">
-									<img src="media/svg/car.svg" alt="">
+									<img data-src="media/svg/car.svg" alt="">
 								</div>
 								<div class="quarter__content">
 									<p class="quarter__name">
@@ -704,7 +704,7 @@
 									<picture>
 										<source srcset="media/img/quarter-2.webp" type="image/webp">
 										<source srcset="media/img/quarter-2.jpg" type="image/jpeg">
-										<img src="media/img/quarter-2.jpg" alt="">
+										<img data-src="media/img/quarter-2.jpg" alt="">
 									</picture>
 								</div>
 							</div>
@@ -713,13 +713,13 @@
 									<picture>
 										<source srcset="media/img/quarter-3.webp" type="image/webp">
 										<source srcset="media/img/quarter-3.jpg" type="image/jpeg">
-										<img src="media/img/quarter-3.jpg" alt="">
+										<img data-src="media/img/quarter-3.jpg" alt="">
 									</picture>
 								</div>
 							</div>
 							<div class="quarter__card flex">
 								<div class="quarter__icon">
-									<img src="media/svg/plane.svg" alt="">
+									<img data-src="media/svg/plane.svg" alt="">
 								</div>
 								<div class="quarter__content">
 									<p class="quarter__name">
@@ -735,13 +735,13 @@
 									<picture>
 										<source srcset="media/img/quarter-4.webp" type="image/webp">
 										<source srcset="media/img/quarter-4.jpg" type="image/jpeg">
-										<img src="media/img/quarter-4.jpg" alt="">
+										<img data-src="media/img/quarter-4.jpg" alt="">
 									</picture>
 								</div>
 							</div>
 							<div class="quarter__card flex">
 								<div class="quarter__icon">
-									<img src="media/svg/road.svg" alt="">
+									<img data-src="media/svg/road.svg" alt="">
 								</div>
 								<div class="quarter__content">
 									<p class="quarter__name">
@@ -754,7 +754,7 @@
 							</div>
 							<div class="quarter__card flex">
 								<div class="quarter__icon">
-									<img src="media/svg/location.svg" alt="">
+									<img data-src="media/svg/location.svg" alt="">
 								</div>
 								<div class="quarter__content">
 									<p class="quarter__name">
@@ -770,7 +770,7 @@
 									<picture>
 										<source srcset="media/img/quarter-5.webp" type="image/webp">
 										<source srcset="media/img/quarter-5.jpg" type="image/jpeg">
-										<img src="media/img/quarter-5.jpg" alt="">
+										<img data-src="media/img/quarter-5.jpg" alt="">
 									</picture>
 								</div>
 								<div class="quarter__info flex">
@@ -805,20 +805,20 @@
 									<h3 class="stock__name">Дом SH 91 1</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
-											</div>
+											<a href="media/img/house1-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-1">
+												<img data-src="media/img/house1-1.jpg" alt="">
+											</a>
+											<a href="media/img/house1-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-1">
+												<img data-src="media/img/house1-2.jpg" alt="">
+											</a>
+											<a href="media/img/house1-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-1">
+												<img data-src="media/img/house1-3.jpg" alt="">
+											</a>
+											<a href="media/img/house1-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-1">
+												<img data-src="media/img/house1-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -840,19 +840,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
+												<img data-src="media/img/house1-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
+												<img data-src="media/img/house1-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
+												<img data-src="media/img/house1-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
+												<img data-src="media/img/house1-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -902,7 +902,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -914,20 +914,20 @@
 									<h3 class="stock__name">Дом SH 91 2</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-4.jpg" alt="">
-											</div>
+											<a href="media/img/house2-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-2">
+												<img data-src="media/img/house2-1.jpg" alt="">
+											</a>
+											<a href="media/img/house2-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-2">
+												<img data-src="media/img/house2-2.jpg" alt="">
+											</a>
+											<a href="media/img/house2-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-2">
+												<img data-src="media/img/house2-3.jpg" alt="">
+											</a>
+											<a href="media/img/house2-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-2">
+												<img data-src="media/img/house2-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house2-5.jpg" alt="">
+												<img data-src="media/img/house2-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -949,19 +949,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-1.jpg" alt="">
+												<img data-src="media/img/house2-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-2.jpg" alt="">
+												<img data-src="media/img/house2-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-3.jpg" alt="">
+												<img data-src="media/img/house2-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-4.jpg" alt="">
+												<img data-src="media/img/house2-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house2-5.jpg" alt="">
+												<img data-src="media/img/house2-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1011,7 +1011,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1023,20 +1023,20 @@
 									<h3 class="stock__name">Дом SH 91 3</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
-											</div>
+											<a href="media/img/house1-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-3">
+												<img data-src="media/img/house1-1.jpg" alt="">
+											</a>
+											<a href="media/img/house1-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-3">
+												<img data-src="media/img/house1-2.jpg" alt="">
+											</a>
+											<a href="media/img/house1-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-3">
+												<img data-src="media/img/house1-3.jpg" alt="">
+											</a>
+											<a href="media/img/house1-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-3">
+												<img data-src="media/img/house1-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1058,19 +1058,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
+												<img data-src="media/img/house1-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
+												<img data-src="media/img/house1-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
+												<img data-src="media/img/house1-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
+												<img data-src="media/img/house1-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1120,7 +1120,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1132,20 +1132,20 @@
 									<h3 class="stock__name">Дом SH 91 4</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-4.jpg" alt="">
-											</div>
+											<a href="media/img/house2-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-4">
+												<img data-src="media/img/house2-1.jpg" alt="">
+											</a>
+											<a href="media/img/house2-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-4">
+												<img data-src="media/img/house2-2.jpg" alt="">
+											</a>
+											<a href="media/img/house2-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-4">
+												<img data-src="media/img/house2-3.jpg" alt="">
+											</a>
+											<a href="media/img/house2-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-4">
+												<img data-src="media/img/house2-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house2-5.jpg" alt="">
+												<img data-src="media/img/house2-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1167,19 +1167,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-1.jpg" alt="">
+												<img data-src="media/img/house2-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-2.jpg" alt="">
+												<img data-src="media/img/house2-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-3.jpg" alt="">
+												<img data-src="media/img/house2-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-4.jpg" alt="">
+												<img data-src="media/img/house2-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house2-5.jpg" alt="">
+												<img data-src="media/img/house2-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1229,7 +1229,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1241,20 +1241,20 @@
 									<h3 class="stock__name">Дом SH 91 5</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
-											</div>
+											<a href="media/img/house1-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-5">
+												<img data-src="media/img/house1-1.jpg" alt="">
+											</a>
+											<a href="media/img/house1-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-5">
+												<img data-src="media/img/house1-2.jpg" alt="">
+											</a>
+											<a href="media/img/house1-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-5">
+												<img data-src="media/img/house1-3.jpg" alt="">
+											</a>
+											<a href="media/img/house1-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-5">
+												<img data-src="media/img/house1-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1276,19 +1276,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
+												<img data-src="media/img/house1-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
+												<img data-src="media/img/house1-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
+												<img data-src="media/img/house1-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
+												<img data-src="media/img/house1-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1338,7 +1338,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1350,20 +1350,20 @@
 									<h3 class="stock__name">Дом SH 91 6</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-4.jpg" alt="">
-											</div>
+											<a href="media/img/house2-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-6">
+												<img data-src="media/img/house2-1.jpg" alt="">
+											</a>
+											<a href="media/img/house2-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-6">
+												<img data-src="media/img/house2-2.jpg" alt="">
+											</a>
+											<a href="media/img/house2-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-6">
+												<img data-src="media/img/house2-3.jpg" alt="">
+											</a>
+											<a href="media/img/house2-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-6">
+												<img data-src="media/img/house2-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house2-5.jpg" alt="">
+												<img data-src="media/img/house2-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1385,19 +1385,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-1.jpg" alt="">
+												<img data-src="media/img/house2-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-2.jpg" alt="">
+												<img data-src="media/img/house2-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-3.jpg" alt="">
+												<img data-src="media/img/house2-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house2-4.jpg" alt="">
+												<img data-src="media/img/house2-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house2-5.jpg" alt="">
+												<img data-src="media/img/house2-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1447,7 +1447,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1459,20 +1459,20 @@
 									<h3 class="stock__name">Дом SH 91 7</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
-											</div>
+											<a href="media/img/house1-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-7">
+												<img data-src="media/img/house1-1.jpg" alt="">
+											</a>
+											<a href="media/img/house1-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-7">
+												<img data-src="media/img/house1-2.jpg" alt="">
+											</a>
+											<a href="media/img/house1-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-7">
+												<img data-src="media/img/house1-3.jpg" alt="">
+											</a>
+											<a href="media/img/house1-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-7">
+												<img data-src="media/img/house1-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1494,19 +1494,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
+												<img data-src="media/img/house1-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
+												<img data-src="media/img/house1-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
+												<img data-src="media/img/house1-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
+												<img data-src="media/img/house1-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1556,7 +1556,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1568,20 +1568,20 @@
 									<h3 class="stock__name">Дом SH 91 8</h3>
 									<div class="stock__main-swiper swiper">
 										<div class="swiper-wrapper">
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
-											</div>
-											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
-											</div>
+											<a href="media/img/house1-1.jpg" class="stock__slide swiper-slide" data-fancybox="house-8">
+												<img data-src="media/img/house1-1.jpg" alt="">
+											</a>
+											<a href="media/img/house1-2.jpg" class="stock__slide swiper-slide" data-fancybox="house-8">
+												<img data-src="media/img/house1-2.jpg" alt="">
+											</a>
+											<a href="media/img/house1-3.jpg" class="stock__slide swiper-slide" data-fancybox="house-8">
+												<img data-src="media/img/house1-3.jpg" alt="">
+											</a>
+											<a href="media/img/house1-4.jpg" class="stock__slide swiper-slide" data-fancybox="house-8">
+												<img data-src="media/img/house1-4.jpg" alt="">
+											</a>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1603,19 +1603,19 @@
 									<div class="stock__swiper swiper">
 										<div class="swiper-wrapper">
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-1.jpg" alt="">
+												<img data-src="media/img/house1-1.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-2.jpg" alt="">
+												<img data-src="media/img/house1-2.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-3.jpg" alt="">
+												<img data-src="media/img/house1-3.jpg" alt="">
 											</div>
 											<div class="stock__slide swiper-slide">
-												<img src="media/img/house1-4.jpg" alt="">
+												<img data-src="media/img/house1-4.jpg" alt="">
 											</div>
 											<a href="#" class="stock__slide stock__video swiper-slide" data-fancybox="house-1">
-												<img src="media/img/house1-5.jpg" alt="">
+												<img data-src="media/img/house1-5.jpg" alt="">
 												<div class="stock__play"></div>
 											</a>
 										</div>
@@ -1665,7 +1665,7 @@
 											<p class="stock__total">4 550 000</p>
 											<p class="stock__comment">Цены актуальны на 100%</p>
 										</div>
-										<button class="stock__btn main-btn main-btn--blue">
+										<button class="stock__btn main-btn main-btn--blue callback-open">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">Хочу такой же дом</span>
 										</button>
@@ -1775,7 +1775,7 @@
 				</section>
 
 				<!-- портфолио -->
-				<section class="portfolio">
+				<section class="portfolio" id="portfolio">
 					<div class="container">
 						<h2 class="portfolio__title section-title">
 							<span class="accent">50+ домов построили</span>
@@ -1786,61 +1786,61 @@
 							<div class="swiper-wrapper">
 								<a href="#" class="portfolio__slide swiper-slide" data-fancybox="portfolio-video">
 									<div class="portfolio__img">
-										<img src="media/img/portfolio-1.jpg" alt="">
+										<img data-src="media/img/portfolio-1.jpg" alt="">
 									</div>
 									<div class="portfolio__play">
-										<img src="media/svg/play.svg" alt="">
+										<img data-src="media/svg/play.svg" alt="">
 									</div>
 									<div class="portfolio__logo">
-										<img src="media/svg/logo-white.svg" alt="">
+										<img data-src="media/svg/logo-white.svg" alt="">
 									</div>
 									<p class="portfolio__name">Дом HS 91</p>
 								</a>
 								<a href="#" class="portfolio__slide swiper-slide" data-fancybox="portfolio-video">
 									<div class="portfolio__img">
-										<img src="media/img/portfolio-1.jpg" alt="">
+										<img data-src="media/img/portfolio-1.jpg" alt="">
 									</div>
 									<div class="portfolio__play">
-										<img src="media/svg/play.svg" alt="">
+										<img data-src="media/svg/play.svg" alt="">
 									</div>
 									<div class="portfolio__logo">
-										<img src="media/svg/logo-white.svg" alt="">
+										<img data-src="media/svg/logo-white.svg" alt="">
 									</div>
 									<p class="portfolio__name">Дом HS 91</p>
 								</a>
 								<a href="#" class="portfolio__slide swiper-slide" data-fancybox="portfolio-video">
 									<div class="portfolio__img">
-										<img src="media/img/portfolio-2.jpg" alt="">
+										<img data-src="media/img/portfolio-2.jpg" alt="">
 									</div>
 									<div class="portfolio__play">
-										<img src="media/svg/play.svg" alt="">
+										<img data-src="media/svg/play.svg" alt="">
 									</div>
 									<div class="portfolio__logo">
-										<img src="media/svg/logo-white.svg" alt="">
+										<img data-src="media/svg/logo-white.svg" alt="">
 									</div>
 									<p class="portfolio__name">Дом HS 91</p>
 								</a>
 								<a href="#" class="portfolio__slide swiper-slide" data-fancybox="portfolio-video">
 									<div class="portfolio__img">
-										<img src="media/img/portfolio-3.jpg" alt="">
+										<img data-src="media/img/portfolio-3.jpg" alt="">
 									</div>
 									<div class="portfolio__play">
-										<img src="media/svg/play.svg" alt="">
+										<img data-src="media/svg/play.svg" alt="">
 									</div>
 									<div class="portfolio__logo">
-										<img src="media/svg/logo-white.svg" alt="">
+										<img data-src="media/svg/logo-white.svg" alt="">
 									</div>
 									<p class="portfolio__name">Дом HS 91</p>
 								</a>
 								<a href="#" class="portfolio__slide swiper-slide" data-fancybox="portfolio-video">
 									<div class="portfolio__img">
-										<img src="media/img/portfolio-1.jpg" alt="">
+										<img data-src="media/img/portfolio-1.jpg" alt="">
 									</div>
 									<div class="portfolio__play">
-										<img src="media/svg/play.svg" alt="">
+										<img data-src="media/svg/play.svg" alt="">
 									</div>
 									<div class="portfolio__logo">
-										<img src="media/svg/logo-white.svg" alt="">
+										<img data-src="media/svg/logo-white.svg" alt="">
 									</div>
 									<p class="portfolio__name">Дом HS 91</p>
 								</a>
@@ -1872,7 +1872,7 @@
 				</section>
 
 				<!-- скачать каталог -->
-				<section class="catalog">
+				<section class="catalog" id="catalog">
 					<div class="container">
 						<div class="catalog__row flex">
 							<div class="catalog__text">
@@ -1906,7 +1906,7 @@
 							</form>
 							<div class="catalog__plate flex">
 								<div class="catalog__icon">
-									<img src="media/svg/circle-arrow.svg" alt="">
+									<img data-src="media/svg/circle-arrow.svg" alt="">
 								</div>
 								<p class="catalog__date">Обновлен: <span id="catalogDate"></span></p>
 							</div>
@@ -1915,7 +1915,7 @@
 				</section>
 
 				<!-- причины выбрать нас -->
-				<section class="benefits">
+				<section class="benefits" id="benefits">
 					<div class="container">
 						<h2 class="benefits__title section-title">
 							<span class="accent">вы можете выбрать</span>
@@ -1932,7 +1932,7 @@
 						<div class="benefits__body flex">
 							<div class="benefits__card flex">
 								<div class="benefits__icon">
-									<img src="media/svg/plan.svg" alt="">
+									<img data-src="media/svg/plan.svg" alt="">
 								</div>
 								<div class="benefits__content">
 									<p class="benefits__name">
@@ -1950,7 +1950,7 @@
 										<source srcset="media/img/ben-1.webp" type="image/webp" media="(min-width: 769px)">
 										<source srcset="media/img/ben-1.jpg" type="image/jpeg" media="(min-width: 769px)">
 										<source srcset="media/img/ben-1-mob.jpg" type="image/jpeg" media="(max-width: 768px)">
-										<img src="media/img/ben-1.jpg" alt="">
+										<img data-src="media/img/ben-1.jpg" alt="">
 									</picture>
 								</div>
 							</div>
@@ -1959,13 +1959,13 @@
 									<picture>
 										<source srcset="media/img/ben-2.webp" type="image/webp">
 										<source srcset="media/img/ben-2.jpg" type="image/jpeg">
-										<img src="media/img/ben-2.jpg" alt="">
+										<img data-src="media/img/ben-2.jpg" alt="">
 									</picture>
 								</div>
 							</div>
 							<div class="benefits__card flex">
 								<div class="benefits__icon">
-									<img src="media/svg/instruments.svg" alt="">
+									<img data-src="media/svg/instruments.svg" alt="">
 								</div>
 								<div class="benefits__content">
 									<p class="benefits__name">
@@ -1984,13 +1984,13 @@
 									<picture>
 										<source srcset="media/img/ben-3.webp" type="image/webp">
 										<source srcset="media/img/ben-3.jpg" type="image/jpeg">
-										<img src="media/img/ben-3.jpg" alt="">
+										<img data-src="media/img/ben-3.jpg" alt="">
 									</picture>
 								</div>
 							</div>
 							<div class="benefits__card flex">
 								<div class="benefits__icon">
-									<img src="media/svg/rub-circle.svg" alt="">
+									<img data-src="media/svg/rub-circle.svg" alt="">
 								</div>
 								<div class="benefits__content">
 									<p class="benefits__name">
@@ -2003,7 +2003,7 @@
 							</div>
 							<div class="benefits__card flex">
 								<div class="benefits__icon">
-									<img src="media/svg/scales.svg" alt="">
+									<img data-src="media/svg/scales.svg" alt="">
 								</div>
 								<div class="benefits__content">
 									<p class="benefits__name">
@@ -2020,7 +2020,7 @@
 										<source srcset="media/img/ben-4.webp" type="image/webp" media="(min-width: 769px)">
 										<source srcset="media/img/ben-4.jpg" type="image/jpeg" media="(min-width: 769px)">
 										<source srcset="media/img/ben-4-mob.jpg" type="image/jpeg" media="(max-width: 768px)">
-										<img src="media/img/ben-4.jpg" alt="">
+										<img data-src="media/img/ben-4.jpg" alt="">
 									</picture>
 								</div>
 							</div>
@@ -2033,7 +2033,7 @@
 				</section>
 
 				<!-- экскурсия -->
-				<section class="excursion">
+				<section class="excursion" id="excursion">
 					<div class="container">
 						<div class="excursion__body flex">
 							<div class="excursion__text">
@@ -2046,7 +2046,7 @@
 									покажем на одной встрече
 								</p>
 							</div>
-							<form action="mailer/send.php" method="POST" class="excursion__form" data-form-validate-js="">
+							<form action="mailer/send.php" method="POST" class="excursion__form" data-form-validate-js>
 								<input type="hidden" name="formname" value="excursion">
 								<p class="excursion__form-title">Оставьте только номер телефона и мы согласуем дату для экскурсии</p>
 								<label class="excursion__label label">Какое время будет вам удобно?</label>
@@ -2066,14 +2066,14 @@
 						<p class="excursion__middle-title">На экскурсии:</p>
 						<div class="excursion__hint flex mobile">
 							<div class="excursion__hint-icon">
-								<img src="media/svg/pointer.svg" alt="">
+								<img data-src="media/svg/pointer.svg" alt="">
 							</div>
 							<p class="excursion__hint-text">Листайте, чтобы увидеть дальше</p>
 						</div>
 						<ul class="excursion__row flex">
 							<li class="excursion__item flex">
 								<div class="excursion__icon">
-									<img src="media/svg/house-2.svg" alt="">
+									<img data-src="media/svg/house-2.svg" alt="">
 								</div>
 								<div class="excursion__info">
 									<p class="excursion__name">Познакомитесь с технологией строительства</p>
@@ -2082,7 +2082,7 @@
 							</li>
 							<li class="excursion__item flex">
 								<div class="excursion__icon">
-									<img src="media/svg/like.svg" alt="">
+									<img data-src="media/svg/like.svg" alt="">
 								</div>
 								<div class="excursion__info">
 									<p class="excursion__name">Оцените качество материалов</p>
@@ -2091,7 +2091,7 @@
 							</li>
 							<li class="excursion__item flex">
 								<div class="excursion__icon">
-									<img src="media/svg/puzzle.svg" alt="">
+									<img data-src="media/svg/puzzle.svg" alt="">
 								</div>
 								<div class="excursion__info">
 									<p class="excursion__name">Посмотрите на дом на разных этапах строительства</p>
@@ -2101,7 +2101,7 @@
 							</li>
 							<li class="excursion__item flex">
 								<div class="excursion__icon">
-									<img src="media/svg/msg.svg" alt="">
+									<img data-src="media/svg/msg.svg" alt="">
 								</div>
 								<div class="excursion__info">
 									<p class="excursion__name">Получите ответы на все интресующие вопросы</p>
@@ -2110,7 +2110,7 @@
 							</li>
 							<li class="excursion__item flex">
 								<div class="excursion__icon">
-									<img src="media/svg/people.svg" alt="">
+									<img data-src="media/svg/people.svg" alt="">
 								</div>
 								<div class="excursion__info">
 									<p class="excursion__name">Познакомитесь с нашими заказчиками, которые уже живут в поселке</p>
@@ -2122,7 +2122,7 @@
 				</section>
 
 				<!-- гарантии -->
-				<section class="warranty">
+				<section class="warranty" id="warranty">
 					<div class="container">
 						<h2 class="warranty__title section-title">
 							<span class="accent">вы можете полностью</span>
@@ -2135,10 +2135,10 @@
 						<div class="warranty__body flex">
 							<a href="#" class="warranty__video flex" data-fancybox="warranty-video">
 								<div class="warranty__play">
-									<img src="media/svg/play.svg" alt="">
+									<img data-src="media/svg/play.svg" alt="">
 								</div>
 								<div class="warranty__img">
-									<img src="media/img/warranty-man.jpg" alt="">
+									<img data-src="media/img/warranty-man.jpg" alt="">
 								</div>
 								<div class="warranty__plate">
 									<p class="warranty__fio"> Анатолий Николаевич </p>
@@ -2298,7 +2298,7 @@
 								<li class="hypothec__card">
 									<div class="hypothec__front flex">
 										<div class="hypothec__icon">
-											<img src="media/svg/sber.svg" alt="">
+											<img data-src="media/svg/sber.svg" alt="">
 										</div>
 										<p class="hypothec__name">
 											Льготная ипотечная программа
@@ -2336,7 +2336,7 @@
 								<li class="hypothec__card">
 									<div class="hypothec__front flex">
 										<div class="hypothec__icon">
-											<img src="media/svg/family.svg" alt="">
+											<img data-src="media/svg/family.svg" alt="">
 										</div>
 										<p class="hypothec__name">
 											Семейная ипотека по ИЖС <b>от 4,6% годовых</b>
@@ -2375,7 +2375,7 @@
 								<li class="hypothec__card">
 									<div class="hypothec__front flex">
 										<div class="hypothec__icon">
-											<img src="media/img/rural.png" alt="">
+											<img data-src="media/img/rural.png" alt="">
 										</div>
 										<p class="hypothec__name">
 											Сельская ипотека
@@ -2445,17 +2445,419 @@
 					</div>
 				</section>
 
-
-				<!-- <section class="">
+				<!-- сертификат -->
+				<section class="certificate">
 					<div class="container">
-						<h2 class="__title section-title"></h2>
-						<p class="__subtitle section-subtitle"></p>
+						<div class="certificate__row flex">
+							<div class="certificate__text">
+								<h2 class="certificate__title section-title">Заботимся <span class="accent">о Вашем бюджете</span></h2>
+								<p class="certificate__subtitle section-subtitle">Закроем аренду на&nbsp;весь период строительства
+									Вашего
+									дома</p>
+								<p class="certificate__descr">тем самым гарантируем кратчайшие сроки строительства </p>
+							</div>
+							<form action="mailer/send.php" method="POST" class="certificate__form" data-form-validate-js>
+								<input type="hidden" name="formname" value="certificate">
+								<p class="certificate__form-title">
+									Дарим сертификат на&nbsp;100&nbsp;000&nbsp;руб в качестве оплаты арендного жилья
+								</p>
+								<p class="certificate__info">
+									на период строительства Вашего дома, чтобы не создавать дополнительную нагрузку на Ваш бюджет
+								</p>
+								<label class="certificate__label label">Введите номер телефона</label>
+								<div class="input-wrap">
+									<input type="tel" name="phone" class="certificate__input input" placeholder="+7(___) ___ - __ - __">
+								</div>
+								<button class="certificate__btn main-btn main-btn--blue">
+									<span class="btn-blick"></span>
+									<span class="main-btn__text">Получить сертификат</span>
+								</button>
+							</form>
+						</div>
 					</div>
-				</section> -->
+				</section>
+
+				<!-- отзывы -->
+				<section class="feedback" id="feedback">
+					<div class="container">
+						<p class="feedback__subtitle section-subtitle">Я даже и не думал, что</p>
+						<h2 class="feedback__title section-title">
+							<span class="accent">строитель&shy;ство дома</span>
+							так быстро и просто
+						</h2>
+						<p class="feedback__subtitle section-subtitle">Отзывы людей, которые уже живут в домах</p>
+						<div class="feedback__swiper swiper">
+							<div class="swiper-wrapper">
+								<a href="#" class="feedback__slide swiper-slide" data-fancybox="feedback-video">
+									<div class="feedback__img">
+										<img data-src="media/img/feedback-1.jpg" alt="">
+									</div>
+									<div class="feedback__play">
+										<img data-src="media/svg/play.svg" alt="">
+									</div>
+									<div class="feedback__logo">
+										<img data-src="media/svg/logo-white.svg" alt="">
+									</div>
+									<p class="feedback__name">Дом HS 91</p>
+								</a>
+								<a href="#" class="feedback__slide swiper-slide" data-fancybox="feedback-video">
+									<div class="feedback__img">
+										<img data-src="media/img/feedback-1.jpg" alt="">
+									</div>
+									<div class="feedback__play">
+										<img data-src="media/svg/play.svg" alt="">
+									</div>
+									<div class="feedback__logo">
+										<img data-src="media/svg/logo-white.svg" alt="">
+									</div>
+									<p class="feedback__name">Дом HS 91</p>
+								</a>
+								<a href="#" class="feedback__slide swiper-slide" data-fancybox="feedback-video">
+									<div class="feedback__img">
+										<img data-src="media/img/feedback-1.jpg" alt="">
+									</div>
+									<div class="feedback__play">
+										<img data-src="media/svg/play.svg" alt="">
+									</div>
+									<div class="feedback__logo">
+										<img data-src="media/svg/logo-white.svg" alt="">
+									</div>
+									<p class="feedback__name">Дом HS 91</p>
+								</a>
+								<a href="#" class="feedback__slide swiper-slide" data-fancybox="feedback-video">
+									<div class="feedback__img">
+										<img data-src="media/img/feedback-1.jpg" alt="">
+									</div>
+									<div class="feedback__play">
+										<img data-src="media/svg/play.svg" alt="">
+									</div>
+									<div class="feedback__logo">
+										<img data-src="media/svg/logo-white.svg" alt="">
+									</div>
+									<p class="feedback__name">Дом HS 91</p>
+								</a>
+								<a href="#" class="feedback__slide swiper-slide" data-fancybox="feedback-video">
+									<div class="feedback__img">
+										<img data-src="media/img/feedback-1.jpg" alt="">
+									</div>
+									<div class="feedback__play">
+										<img data-src="media/svg/play.svg" alt="">
+									</div>
+									<div class="feedback__logo">
+										<img data-src="media/svg/logo-white.svg" alt="">
+									</div>
+									<p class="feedback__name">Дом HS 91</p>
+								</a>
+							</div>
+						</div>
+						<div class="feedback__bottom flex">
+							<div class="feedback__arrows flex">
+								<button class="slider-btn slider-btn--prev" aria-label="предыдущий слайд">
+									<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.67899 10.2651L16.6299 10.2651L16.6299 8.61773L1.67899 8.61773L1.67899 10.2651Z" />
+										<path
+											d="M4.53076 5.36152L5.67989 6.52642L2.83005 9.41538L5.67989 12.3043L4.53076 13.4692L0.531797 9.41538L4.53076 5.36152Z" />
+									</svg>
+								</button>
+								<button class="slider-btn slider-btn--next" aria-label="следующий слайд">
+									<svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.7639 10.2651L0.812988 10.2651L0.812988 8.61773L15.7639 8.61773L15.7639 10.2651Z" />
+										<path
+											d="M12.9121 5.36152L11.763 6.52642L14.6128 9.41538L11.763 12.3043L12.9121 13.4692L16.9111 9.41538L12.9121 5.36152Z" />
+									</svg>
+								</button>
+							</div>
+							<a href="#" class="feedback__link" target="_blank">
+								<span>Смотреть больше обзоров</span>
+								<span>на ютуб-канале</span>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- консультация -->
+				<section class="consultation">
+					<div class="container">
+						<h2 class="consultation__title section-title">
+							<span class="accent">сделай первый шаг</span>
+							к собствен&shy;ному дому
+						</h2>
+						<p class="consultation__subtitle section-subtitle">
+							Получите бесплатную консультацию специалиста по телефону через 5 минут
+						</p>
+
+						<div class="consultation__body flex">
+							<div class="consultation__picture">
+								<div class="consultation__img">
+									<img data-src="media/img/consultation.jpg" alt="">
+								</div>
+								<div class="consultation__info">
+									<p class="consultation__fio">Максим Викторович</p>
+									<p class="consultation__job">Специалист по работе с клиентами</p>
+								</div>
+							</div>
+							<div class="consultation__card flex">
+								<div class="consultation__icon">
+									<img data-src="media/svg/group.svg" alt="">
+								</div>
+								<p class="consultation__name">
+									Выслушаем и вникнем в суть вашей ситуации, подробно расскажем про материалы
+								</p>
+							</div>
+							<div class="consultation__card flex">
+								<div class="consultation__icon">
+									<img data-src="media/svg/group.svg" alt="">
+								</div>
+								<p class="consultation__name">
+									Расскажем какие гарантии вы получите при работе с нами
+								</p>
+							</div>
+							<div class="consultation__card flex">
+								<div class="consultation__icon">
+									<img data-src="media/svg/group.svg" alt="">
+								</div>
+								<p class="consultation__name">
+									Подберём индивидуальное решение, сориентируем
+									по&nbsp;срокам и стоимости строительства
+								</p>
+							</div>
+						</div>
+
+						<form action="mailer/send.php" method="POST" class="consultation__form flex" data-form-validate-js>
+							<input type="hidden" name="formname" value="consultation">
+							<p class="consultation__form-title">
+								Заполните форму и мы вам перезвоним
+							</p>
+							<div class="consultation__wrap flex">
+								<label class="consultation__label label">Введите номер телефона</label>
+								<div class="input-wrap">
+									<input type="tel" name="phone" class="consultation__input input" placeholder="+7(___)___-__-__">
+								</div>
+								<div class="consultation__agree agree">
+									<div class="agree__checkbox"></div>
+									<p class="agree__text">
+										Согласен с условиями <span class="agree__link conf">политики конфиденциальности</span> данных
+									</p>
+								</div>
+							</div>
+							<button class="consultation__btn main-btn main-btn--blue">
+								<span class="btn-blick"></span>
+								<span class="main-btn__text">Получить консультацию</span>
+							</button>
+						</form>
+					</div>
+				</section>
+
+				<!-- популярные вопросы -->
+				<section class="faq" id="faq">
+					<div class="container">
+						<div class="faq__body flex">
+							<div class="faq__head flex">
+								<h2 class="faq__title section-title"><span class="accent">популярные</span> вопросы</h2>
+								<p class="faq__subtitle section-subtitle">которые задают нашим специалистам</p>
+								<a href="#" class="faq__wa flex" target="_blank">
+									<svg viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17.5 0.5C8.11489 0.5 0.5 7.89092 0.5 17C0.5 20.6475 1.7164 24.007 3.77341 26.7426L1.60762 32.9625L8.36213 30.918C11.0026 32.5497 14.1376 33.5 17.5 33.5C26.8851 33.5 34.5 26.1091 34.5 17C34.5 7.89092 26.8851 0.5 17.5 0.5ZM25.283 25.8499C22.1975 27.0497 18.5186 25.8883 14.4936 22.9223C10.4686 19.9564 7.81821 15.781 7.6402 12.6806C7.46219 9.58028 10.0631 8.01571 11.4773 8.02531C12.8915 8.0349 14.4442 12.4215 14.4639 13.0934C14.4837 13.7749 12.7333 14.9843 12.664 15.5602C12.5948 16.1361 15.0474 18.9773 16.0858 19.7452C17.1143 20.5035 19.2405 21.9625 20.3383 21.8281C21.4261 21.6841 22.1481 19.5628 22.8403 19.4284C23.5326 19.2941 27.3104 21.1178 27.6862 21.5881C28.062 22.0681 28.0224 24.7941 25.283 25.8499Z" />
+									</svg>
+									<p class="faq__link">Задать свой вопрос в Whatsapp</p>
+								</a>
+							</div>
+							<div class="faq__content flex">
+								<ul class="faq__list flex">
+									<li class="faq__item">
+										<p class="faq__question">
+											Какие есть варианты оплаты?
+										</p>
+										<p class="faq__answer">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, optio.
+										</p>
+									</li>
+									<li class="faq__item">
+										<p class="faq__question">
+											Какой размер ежемесячных платежей
+											в коттеджном квартале?
+										</p>
+										<p class="faq__answer">
+											Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos deserunt fuga doloribus minima
+											nulla!
+											Provident.
+										</p>
+									</li>
+									<li class="faq__item">
+										<p class="faq__question">
+											Есть ли центральная канализация
+											и&nbsp;водоснабжение в квартале?
+										</p>
+										<p class="faq__answer">
+											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, et repudiandae commodi impedit
+											officiis nam a nulla.
+										</p>
+									</li>
+									<li class="faq__item">
+										<p class="faq__question">
+											Возможно ли доехать до квартала
+											общественным транспортом?
+										</p>
+										<p class="faq__answer">
+											Да, конечно. От м. Московская отправляется маршрутные такси #545.Остановка в д. Монделево в
+											5&nbsp;минутах от въезда в квартал. В 10 мин. от квартала находится ж/д станция Антропшино.
+										</p>
+									</li>
+									<li class="faq__item">
+										<p class="faq__question">Дополнительный ворпос №5</p>
+										<p class="faq__answer">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia vel saepe ex.
+										</p>
+									</li>
+									<li class="faq__item">
+										<p class="faq__question">Дополнительный ворпос №6</p>
+										<p class="faq__answer">
+											Lorem ipsum dolor sit amet consectetur adipisicing.
+										</p>
+									</li>
+								</ul>
+								<button class="faq__more">
+									Открыть еще вопросы
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- контакты -->
+				<section class="contacts" id="contacts">
+					<div class="container">
+						<h2 class="contacts__title section-title">
+							<span class="accent">после сдачи дома</span>
+							не бросаем вас
+						</h2>
+						<p class="contacts__subtitle section-subtitle">
+							остаемся в посёлке и продолжаем строить
+						</p>
+						<p class="contacts__info">
+							При возникновение каких либо проблем с домом, наши специалисты устранят их в кратчайшие сроки
+						</p>
+						<address class="contacts__row flex">
+							<div class="contacts__item">
+								<p class="contacts__label">Адрес:</p>
+								<p class="contacts__data">
+									Санкт-Петербург,<br>
+									Киевское шоссе д.12
+								</p>
+							</div>
+							<div class="contacts__item">
+								<p class="contacts__label">Наш телефон</p>
+								<p class="contacts__data">
+									<a class="contacts__phone" href="tel:+78127772357">+7 (812) 777-23-57</a>
+									<a class="contacts__phone" href="tel:+78127772357">+7 (812) 777-23-57</a>
+								</p>
+							</div>
+							<div class="contacts__item">
+								<p class="contacts__label">График работы</p>
+								<p class="contacts__data">Ежедневно 9:00 - 19:00</p>
+							</div>
+						</address>
+						<a href="https://yandex.ru/navi/?whatshere%5Bpoint%5D=30.371357%2C59.627727&whatshere%5Bzoom%5D=18&lang=ru&from=navi"
+							class="contacts__map" target="_blank">
+							<picture>
+								<source media="(max-width: 768px)" srcset="media/img/map-mob.jpg">
+								<img data-src="media/img/map.jpg" alt="">
+							</picture>
+						</a>
+						<div class="contacts__gallery flex">
+							<div class="contacts__office">
+								<div class="contacts__excursion-row flex">
+									<p class="contacts__subtitle section-subtitle">До встречи в офисе:</p>
+								</div>
+								<div class="contacts__swiper contacts__swiper--office swiper">
+									<div class="swiper-wrapper">
+										<a href="media/img/office-1.jpg" class="contacts__slide swiper-slide"
+											data-fancybox="gallery-office">
+											<img data-src="media/img/office-1.jpg" alt="">
+										</a>
+										<a href="media/img/office-1.jpg" class="contacts__slide swiper-slide"
+											data-fancybox="gallery-office">
+											<img data-src="media/img/office-1.jpg" alt="">
+										</a>
+										<a href="media/img/office-1.jpg" class="contacts__slide swiper-slide"
+											data-fancybox="gallery-office">
+											<img data-src="media/img/office-1.jpg" alt="">
+										</a>
+									</div>
+									<button class="slider-btn slider-btn--prev" aria-label="предыдущий слайд">
+										<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.81962 10.2656L16.7705 10.2656L16.7705 8.61822L1.81962 8.61822L1.81962 10.2656Z" />
+											<path
+												d="M4.6709 5.36103L5.82003 6.52593L2.97019 9.41489L5.82003 12.3038L4.6709 13.4688L0.671934 9.41489L4.6709 5.36103Z" />
+										</svg>
+									</button>
+									<button class="slider-btn slider-btn--next" aria-label="следующий слайд">
+										<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4353 10.2656L1.48438 10.2656L1.48438 8.61822L16.4353 8.61822L16.4353 10.2656Z" />
+											<path
+												d="M13.584 5.36103L12.4349 6.52593L15.2847 9.41489L12.4349 12.3038L13.584 13.4688L17.5829 9.41489L13.584 5.36103Z" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="contacts__excursion">
+								<div class="contacts__excursion-row flex">
+									<p class="contacts__subtitle section-subtitle">На экскурсии:</p>
+									<a href="#excursion" class="contacts__btn main-btn main-btn--transparent" data-anchor-btn-js="">
+										<span class="main-btn__text">Записаться на экскурсию</span>
+									</a>
+								</div>
+								<div class="contacts__swiper contacts__swiper--excursion swiper">
+									<div class="swiper-wrapper">
+										<a href="media/img/excursion-1.jpg" class="contacts__slide swiper-slide"
+											data-fancybox="gallery-excursion">
+											<img data-src="media/img/excursion-1.jpg" alt="">
+										</a>
+										<a href="media/img/excursion-1.jpg" class="contacts__slide swiper-slide"
+											data-fancybox="gallery-excursion">
+											<img data-src="media/img/excursion-1.jpg" alt="">
+										</a>
+										<a href="media/img/excursion-1.jpg" class="contacts__slide swiper-slide"
+											data-fancybox="gallery-excursion">
+											<img data-src="media/img/excursion-1.jpg" alt="">
+										</a>
+									</div>
+									<button class="slider-btn slider-btn--prev" aria-label="предыдущий слайд">
+										<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1.81962 10.2656L16.7705 10.2656L16.7705 8.61822L1.81962 8.61822L1.81962 10.2656Z" />
+											<path
+												d="M4.6709 5.36103L5.82003 6.52593L2.97019 9.41489L5.82003 12.3038L4.6709 13.4688L0.671934 9.41489L4.6709 5.36103Z" />
+										</svg>
+									</button>
+									<button class="slider-btn slider-btn--next" aria-label="следующий слайд">
+										<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4353 10.2656L1.48438 10.2656L1.48438 8.61822L16.4353 8.61822L16.4353 10.2656Z" />
+											<path
+												d="M13.584 5.36103L12.4349 6.52593L15.2847 9.41489L12.4349 12.3038L13.584 13.4688L17.5829 9.41489L13.584 5.36103Z" />
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 
 			<footer class="footer">
-				<div class="container"></div>
+				<div class="container">
+					<div class="footer__row flex">
+						<p class="footer__rigths">
+							Copyright 2023<br>
+							Все права защищены
+						</p>
+						<p class="footer__conf conf">Политика конфиденциальности</p>
+						<p class="footer__author">
+							Сделано с любовью
+							в&nbsp;<a href="https://paradigma.website/" target="_blank">paradigma.website</a>
+						</p>
+					</div>
+				</div>
 			</footer>
 		</div>
 	</div>
@@ -2468,6 +2870,405 @@
 		</svg>
 	</button>
 
+	<!-- липкое меню справа -->
+	<div class="sidemenu">
+		<button class="sidemenu__close" aria-label="закрыть боковое меню">
+			<svg viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M8.72591 1.54357L5.76948 4.5L8.72591 7.45643C8.81166 7.53925 8.88006 7.63832 8.92711 7.74785C8.97416 7.85739 8.99893 7.9752 8.99997 8.09441C9.001 8.21361 8.97829 8.33183 8.93314 8.44217C8.888 8.5525 8.82134 8.65275 8.73704 8.73704C8.65275 8.82134 8.5525 8.888 8.44217 8.93314C8.33183 8.97829 8.21361 9.001 8.09441 8.99997C7.9752 8.99893 7.85739 8.97416 7.74785 8.92711C7.63832 8.88006 7.53925 8.81166 7.45643 8.72591L4.5 5.76948L1.54357 8.72591C1.46075 8.81166 1.36168 8.88006 1.25215 8.92711C1.14261 8.97416 1.0248 8.99893 0.905595 8.99997C0.786386 9.001 0.668165 8.97829 0.55783 8.93314C0.447494 8.888 0.347254 8.82134 0.262957 8.73704C0.178661 8.65275 0.111997 8.5525 0.0668554 8.44217C0.0217135 8.33183 -0.00100199 8.21361 3.3898e-05 8.09441C0.00106979 7.9752 0.0258366 7.85739 0.072889 7.74785C0.119941 7.63832 0.188338 7.53925 0.274086 7.45643L3.23052 4.5L0.274086 1.54357C0.188338 1.46075 0.119941 1.36168 0.072889 1.25215C0.0258366 1.14261 0.00106979 1.0248 3.3898e-05 0.905595C-0.00100199 0.786386 0.0217135 0.668165 0.0668554 0.55783C0.111997 0.447494 0.178661 0.347254 0.262957 0.262957C0.347254 0.178661 0.447494 0.111997 0.55783 0.0668554C0.668165 0.0217135 0.786386 -0.00100199 0.905595 3.3898e-05C1.0248 0.00106979 1.14261 0.0258366 1.25215 0.072889C1.36168 0.119941 1.46075 0.188338 1.54357 0.274086L4.5 3.23052L7.45643 0.274086C7.53925 0.188338 7.63832 0.119941 7.74785 0.072889C7.85739 0.0258366 7.9752 0.00106979 8.09441 3.3898e-05C8.21361 -0.00100199 8.33183 0.0217135 8.44217 0.0668554C8.5525 0.111997 8.65275 0.178661 8.73704 0.262957C8.82134 0.347254 8.888 0.447494 8.93314 0.55783C8.97829 0.668165 9.001 0.786386 8.99997 0.905595C8.99893 1.0248 8.97416 1.14261 8.92711 1.25215C8.88006 1.36168 8.81166 1.46075 8.72591 1.54357Z"
+					fill="white" />
+			</svg>
+		</button>
+		<div class="sidemenu__body flex">
+			<div class="sidemenu__item callback-open">
+				<div class="sidemenu__icon">
+					<img data-src="media/svg/phone-white.svg" alt="">
+				</div>
+				<p class="sidemenu__name">
+					Заказать консультацию
+				</p>
+			</div>
+			<a href="#catalog" class="sidemenu__item" data-anchor-btn-js>
+				<div class="sidemenu__icon">
+					<img data-src="media/svg/download.svg" alt="">
+				</div>
+				<p class="sidemenu__name">
+					Скачать каталог
+				</p>
+			</a>
+			<a href="#excursion" class="sidemenu__item" data-anchor-btn-js>
+				<div class="sidemenu__icon">
+					<img data-src="media/svg/location-white.svg" alt="">
+				</div>
+				<p class="sidemenu__name">
+					Записаться на&nbsp;экскурсию
+				</p>
+			</a>
+		</div>
+		<button class="sidemenu__top" aria-label="свернуть боковое меню">
+			<svg viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M7.8331 3.91699L6.70766 5.04244L3.91655 2.25133L1.12545 5.04244L0 3.91699L3.91655 0.000440723L7.8331 3.91699Z"
+					fill="white" />
+			</svg>
+
+		</button>
+	</div>
+
+	<div class="video desktop">
+		<p class="video__label">Нажмите</p>
+		<a href="#" class="video__img" data-fancybox="video">
+			<img data-src="media/img/video.jpg" alt="">
+		</a>
+		<button class="video__close" aria-label="закрыть видео">
+			<svg viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect x="1.4248" width="19.0033" height="2.8505" rx="1" transform="rotate(30 1.4248 0)" />
+				<rect y="9.53125" width="19.0033" height="2.8505" rx="1" transform="rotate(-30 0 9.53125)" />
+			</svg>
+		</button>
+		<div class="video__play">
+			<img data-src="media/svg/play.svg" alt="">
+		</div>
+		<p class="video__descr">О коттеджном квартале Family Village</p>
+	</div>
+
+	<!-- popup заказать обратный звонок -->
+	<div class="popup popup-callback">
+		<div class="popup__body">
+			<div class="popup__close">
+				<svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="2.08887" y="0.431641" width="20" height="3" rx="1" transform="rotate(30 2.08887 0.431641)" />
+					<rect x="0.589844" y="10.4629" width="20" height="3" rx="1" transform="rotate(-30 0.589844 10.4629)" />
+				</svg>
+			</div>
+			<h3 class="popup__title">Перезвоните мне</h3>
+			<form action="mailer/send.php" method="post" class="popup__form" data-form-validate-js>
+				<input type="hidden" name="formname" value="callback">
+				<div class="popup__row flex">
+					<div class="popup__content">
+						<label class="popup__label label">Введите номер телефона</label>
+						<div class="input-wrap">
+							<input type="tel" name="phone" class="popup__input input" placeholder="+7(___) ___ - __ - __">
+						</div>
+						<button class="popup__btn main-btn main-btn--blue">
+							<span class="btn-blick"></span>
+							<span class="main-btn__text">Перезвоните</span>
+						</button>
+					</div>
+					<div class="popup__img">
+						<img data-src="media/img/quiz-manager.png" alt="">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- popup стойте -->
+	<div class="popup popup-wait">
+		<div class="popup__body">
+			<div class="popup__close">
+				<svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="2.08887" y="0.431641" width="20" height="3" rx="1" transform="rotate(30 2.08887 0.431641)" />
+					<rect x="0.589844" y="10.4629" width="20" height="3" rx="1" transform="rotate(-30 0.589844 10.4629)" />
+				</svg>
+			</div>
+			<p class="popup__overhead">Подождите! Не уходите с&nbsp;пустыми руками!</p>
+			<p class="popup__note">Бесплатно получите :</p>
+			<h3 class="popup__title">Топ-7 советов как выбрать подрядчика для строительства дома и не ошибиться</h3>
+			<form action="mailer/send.php" method="post" class="popup__form" data-download-form-js="files/catalog.pdf">
+				<input type="hidden" name="formname" value="instruction">
+				<div class="popup__row flex">
+					<div class="popup__content">
+						<label class="popup__label label">Выберите куда вам удобнее отправить?</label>
+						<div class="popup__select select">
+							<select name="select">
+								<option value="Получить в WhatsApp">
+									Получить в WhatsApp
+								</option>
+								<option value="Получить в Telegram">
+									Получить в Telegram
+								</option>
+							</select>
+						</div>
+						<label class="popup__label label">Введите номер телефона</label>
+						<div class="input-wrap">
+							<input type="tel" name="phone" class="popup__input input" placeholder="+7(___) ___ - __ - __">
+						</div>
+						<button class="popup__btn main-btn main-btn--blue">
+							<span class="btn-blick"></span>
+							<span class="main-btn__text">Скачать каталог сейчас</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- popup Политика конфиденциальности -->
+	<div class="popup popup-conf">
+		<div class="popup__body">
+			<div class="popup__close">
+				<svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="2.08887" y="0.431641" width="20" height="3" rx="1" transform="rotate(30 2.08887 0.431641)" />
+					<rect x="0.589844" y="10.4629" width="20" height="3" rx="1" transform="rotate(-30 0.589844 10.4629)" />
+				</svg>
+			</div>
+			<h2>Политика конфеденциальности</h2>
+			<p>Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности)
+				действует
+				в
+				отношении всей информации, которую сайт&nbsp;, (далее – ) расположенный на доменном имени&nbsp;(а
+				также
+				его
+				субдоменах), может
+				получить о Пользователе во время использования сайта (а также его субдоменов), его программ и его
+				продуктов.
+			</p>
+			<h2>1. Определение терминов</h2>
+			<p><strong>1.1 В настоящей Политике конфиденциальности используются следующие термины:</strong></p>
+			<p>1.1.1. «<strong>Администрация сайта</strong>» (далее – Администрация) – уполномоченные сотрудники на
+				управление сайтом&nbsp;, которые организуют и (или) осуществляют обработку персональных данных, а
+				также
+				определяет цели обработки персональных
+				данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с
+				персональными
+				данными.</p>
+			<p>1.1.2. «Персональные данные» — любая информация, относящаяся к прямо или косвенно определенному, или
+				определяемому физическому лицу (субъекту персональных данных).</p>
+			<p>1.1.3. «Обработка персональных данных» — любое действие (операция) или совокупность действий
+				(операций),
+				совершаемых с использованием средств автоматизации или без использования таких средств с персональными
+				данными, включая сбор, запись,
+				систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование,
+				передачу
+				(распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение
+				персональных
+				данных.</p>
+			<p>1.1.4. «Конфиденциальность персональных данных» — обязательное для соблюдения Оператором или иным
+				получившим
+				доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта
+				персональных данных или наличия
+				иного законного основания.</p>
+			<p>1.1.5. «Сайт » — это совокупность связанных между собой веб-страниц, размещенных в сети Интернет по
+				уникальному адресу (URL):&nbsp; https://demo.quizlanding.ru/, а также его субдоменах.</p>
+			<p>1.1.6. «Субдомены» — это страницы или совокупность страниц, расположенные на доменах третьего уровня,
+				принадлежащие сайту , а также другие временные страницы, внизу который указана контактная информация
+				Администрации</p>
+			<p>1.1.5. «Пользователь сайта&nbsp;» (далее Пользователь) – лицо, имеющее доступ к сайту&nbsp;,
+				посредством
+				сети Интернет и использующее информацию, материалы и продукты сайта&nbsp;.</p>
+			<p>1.1.7. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере
+				пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при
+				попытке открыть страницу соответствующего
+				сайта.
+			</p>
+			<p>1.1.8. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, через который Пользователь
+				получает
+				доступ на .</p>
+			<h2>2. Общие положения</h2>
+			<p>2.1. Использование сайта Пользователем означает согласие с настоящей Политикой конфиденциальности и
+				условиями обработки персональных данных Пользователя.</p>
+			<p>2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить
+				использование сайта .</p>
+			<p>2.3. Настоящая Политика конфиденциальности применяется к сайту . не контролирует и не несет
+				ответственность
+				за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте .</p>
+			<p>2.4. Администрация не проверяет достоверность персональных данных, предоставляемых Пользователем.</p>
+			<h2>3. Предмет политики конфиденциальности</h2>
+			<p>3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации по неразглашению
+				и
+				обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет
+				по
+				запросу Администрации при регистрации
+				на сайте или при подписке на информационную e-mail рассылку.</p>
+			<p>3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности,
+				предоставляются Пользователем путём заполнения форм на сайте и включают в себя следующую
+				информацию:<br>
+				3.2.1. фамилию, имя, отчество Пользователя;<br> 3.2.2. контактный телефон Пользователя;<br> 3.2.3.
+				адрес
+				электронной почты (e-mail)<br> 3.2.4. место жительство Пользователя (при необходимости)<br> 3.2.5.
+				фотографию (при необходимости)</p>
+			<p>3.3. защищает Данные, которые автоматически передаются при посещении страниц:<br> — IP адрес;<br> —
+				информация из cookies;<br> — информация о браузере<br> — время доступа;<br> — реферер (адрес
+				предыдущей
+				страницы).</p>
+			<p>3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта&nbsp;, требующим
+				авторизации.
+			</p>
+			<p>3.3.2. осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация используется с
+				целью
+				предотвращения, выявления и решения технических проблем.</p>
+			<p>3.4. Любая иная персональная информация неоговоренная выше (история посещения, используемые браузеры,
+				операционные системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев,
+				предусмотренных в п.п. 5.2. настоящей
+				Политики конфиденциальности.</p>
+			<h2>4. Цели сбора персональной информации пользователя</h2>
+			<p>4.1. Персональные данные Пользователя Администрация может использовать в целях:<br> 4.1.1.
+				Идентификации
+				Пользователя, зарегистрированного на сайте для его дальнейшей авторизации.<br> 4.1.2. Предоставления
+				Пользователю доступа к персонализированным
+				данным сайта .<br> 4.1.3. Установления с Пользователем обратной связи, включая направление
+				уведомлений,
+				запросов, касающихся использования сайта , обработки запросов и заявок от Пользователя.<br> 4.1.4.
+				Определения места нахождения
+				Пользователя для обеспечения безопасности, предотвращения мошенничества.<br> 4.1.5. Подтверждения
+				достоверности и полноты персональных данных, предоставленных Пользователем.<br> 4.1.6. Создания
+				учетной
+				записи для использования частей
+				сайта , если Пользователь дал согласие на создание учетной записи.<br> 4.1.7. Уведомления Пользователя
+				по
+				электронной почте.<br> 4.1.8. Предоставления Пользователю эффективной технической поддержки при
+				возникновении проблем, связанных
+				с использованием сайта .<br> 4.1.9. Предоставления Пользователю с его согласия специальных
+				предложений,
+				новостной рассылки и иных сведений от имени сайта .</p>
+			<h2>5. Способы и сроки обработки персональной информации</h2>
+			<p>5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным
+				способом, в том числе в информационных системах персональных данных с использованием средств
+				автоматизации
+				или без использования таких
+				средств.
+			</p>
+			<p>5.2. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной
+				власти
+				Российской Федерации только по основаниям и в порядке, установленным законодательством Российской
+				Федерации.
+			</p>
+			<p>5.3. При утрате или разглашении персональных данных Администрация вправе не информировать Пользователя
+				об
+				утрате или разглашении персональных данных.</p>
+			<p>5.4. Администрация принимает необходимые организационные и технические меры для защиты персональной
+				информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения,
+				блокирования,
+				копирования, распространения, а
+				также от иных неправомерных действий третьих лиц.</p>
+			<p>5.5. Администрация совместно с Пользователем принимает все необходимые меры по предотвращению убытков
+				или
+				иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.
+			</p>
+			<h2>6. Права и обязанности сторон</h2>
+			<p><strong>6.1. Пользователь вправе:</strong></p>
+			<p>6.1.1. Принимать свободное решение о предоставлении своих персональных данных, необходимых для
+				использования
+				сайта , и давать согласие на их обработку.</p>
+			<p>6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения данной
+				информации.</p>
+			<p>6.1.3. Пользователь имеет право на получение у Администрации информации, касающейся обработки его
+				персональных данных, если такое право не ограничено в соответствии с федеральными законами.
+				Пользователь
+				вправе требовать от Администрации
+				уточнения его персональных данных, их блокирования или уничтожения в случае, если персональные данные
+				являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для
+				заявленной цели обработки, а также
+				принимать предусмотренные законом меры по защите своих прав. Для этого достаточно уведомить
+				Администрацию
+				по
+				указаному E-mail адресу.</p>
+			<p><strong>6.2. Администрация обязана:</strong></p>
+			<p>6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики
+				конфиденциальности.</p>
+			<p>6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного
+				письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо
+				разглашение
+				иными возможными способами
+				переданных персональных данных Пользователя, за исключением п.п. 5.2. настоящей Политики
+				Конфиденциальности.
+			</p>
+			<p>6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя
+				согласно порядку, обычно используемого для защиты такого рода информации в существующем деловом
+				обороте.
+			</p>
+			<p>6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с
+				момента
+				обращения или запроса Пользователя, или его законного представителя либо уполномоченного органа по
+				защите
+				прав субъектов персональных
+				данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных
+				действий.
+			</p>
+			<h2>Ответственность сторон</h2>
+			<p>7.1. Администрация, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые
+				Пользователем в связи с неправомерным использованием персональных данных, в соответствии с
+				законодательством
+				Российской Федерации, за исключением
+				случаев, предусмотренных п.п. 5.2. и 7.2. настоящей Политики Конфиденциальности.</p>
+			<p>7.2. В случае утраты или разглашения Конфиденциальной информации Администрация не несёт
+				ответственность,
+				если данная конфиденциальная информация:<br> 7.2.1. Стала публичным достоянием до её утраты или
+				разглашения.<br> 7.2.2. Была получена
+				от третьей стороны до момента её получения Администрацией Ресурса.<br> 7.2.3. Была разглашена с
+				согласия
+				Пользователя.</p>
+			<p>7.3. Пользователь несет полную ответственность за соблюдение требований законодательства РФ, в том
+				числе
+				законов о рекламе, о защите авторских и смежных прав, об охране товарных знаков и знаков обслуживания,
+				но
+				не
+				ограничиваясь перечисленным,
+				включая полную ответственность за содержание и форму материалов.</p>
+			<p>7.4. Пользователь признает, что ответственность за любую информацию (в том числе, но не ограничиваясь:
+				файлы
+				с данными, тексты и т. д.), к которой он может иметь доступ как к части сайта , несет лицо,
+				предоставившее
+				такую информацию.</p>
+			<p>7.5. Пользователь соглашается, что информация, предоставленная ему как часть сайта , может являться
+				объектом
+				интеллектуальной собственности, права на который защищены и принадлежат другим Пользователям,
+				партнерам
+				или
+				рекламодателям, которые
+				размещают такую информацию на сайте .<br> Пользователь не вправе вносить изменения, передавать в
+				аренду,
+				передавать на условиях займа, продавать, распространять или создавать производные работы на основе
+				такого
+				Содержания (полностью
+				или в части), за исключением случаев, когда такие действия были письменно прямо разрешены
+				собственниками
+				такого Содержания в соответствии с условиями отдельного соглашения.</p>
+			<p>7.6. В отношение текстовых материалов (статей, публикаций, находящихся в свободном публичном доступе
+				на
+				сайте ) допускается их распространение при условии, что будет дана ссылка на .</p>
+			<p>7.7. Администрация не несет ответственности перед Пользователем за любой убыток или ущерб, понесенный
+				Пользователем в результате удаления, сбоя или невозможности сохранения какого-либо Содержания и иных
+				коммуникационных данных, содержащихся
+				на сайте или передаваемых через него.</p>
+			<p>7.8. Администрация не несет ответственности за любые прямые или косвенные убытки, произошедшие из-за:
+				использования либо невозможности использования сайта, либо отдельных сервисов; несанкционированного
+				доступа
+				к коммуникациям Пользователя;
+				заявления или поведение любого третьего лица на сайте.</p>
+			<p>7.9. Администрация не несет ответственность за какую-либо информацию, размещенную пользователем на
+				сайте
+				,
+				включая, но не ограничиваясь: информацию, защищенную авторским правом, без прямого согласия владельца
+				авторского права.</p>
+			<h2>8. Разрешение споров</h2>
+			<p>8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем и
+				Администрацией,
+				обязательным является предъявление претензии (письменного предложения или предложения в электронном
+				виде
+				о
+				добровольном урегулировании
+				спора).
+			</p>
+			<p>8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно или в
+				электронном виде уведомляет заявителя претензии о результатах рассмотрения претензии.</p>
+			<p>8.3. При не достижении соглашения спор будет передан на рассмотрение Арбитражного суда г. .</p>
+			<p>8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией
+				применяется
+				действующее законодательство Российской Федерации.</p>
+			<h2>9. Дополнительные условия</h2>
+			<p>9.1. Администрация вправе вносить изменения в настоящую Политику конфиденциальности без согласия
+				Пользователя.</p>
+			<p>9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на сайте , если иное не
+				предусмотрено новой редакцией Политики конфиденциальности.</p>
+			<p>9.3. Все предложения или вопросы касательно настоящей Политики конфиденциальности следует сообщать по
+				адресу:</p>
+			<p>9.4. Действующая Политика конфиденциальности размещена на странице по адресу http:///politika.html</p>
+			<p>Обновлено: 29 Сентября 2021 года</p>
+		</div>
+	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
 		integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -2475,9 +3276,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
 		integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
-		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 	<script src="libs/lazyload.min.js"></script>
 	<script src="libs/jquery.inputmask.min.js"></script>
 	<script src="libs/jquery.cookie.js"></script>

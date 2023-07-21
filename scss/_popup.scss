@@ -1,0 +1,267 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 52;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	transition: opacity 0.4s ease-in-out;
+	background-color: rgba($color: #000, $alpha: 0.7);
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 60;
+		width: 85rem;
+		height: fit-content;
+		margin: auto;
+		padding: 6.2rem 6.3rem 6.8rem 7.5rem;
+		border-radius: 7.5rem;
+		overflow: hidden;
+		background: #fff;
+		cursor: default;
+		color: $main-color;
+	}
+
+	&__close {
+		position: absolute;
+		top: 5.8rem;
+		right: 6.3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 6.5rem;
+		height: 6.5rem;
+		border-radius: 50%;
+		border: 0.1rem solid currentColor;
+		color: $gray;
+		transition: color 0.3s ease-in-out;
+
+		svg {
+			width: 1.9rem;
+			height: 1.3rem;
+		}
+
+		rect {
+			fill: currentColor;
+		}
+
+		&:hover {
+			cursor: pointer;
+			color: $accent-color;
+		}
+	}
+
+	&__title {
+		margin-bottom: 3rem;
+		font-size: 2.4rem;
+		line-height: 3rem;
+	}
+
+	&__overhead {
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+
+	&__note {
+		margin-bottom: 1.5rem;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+		color: $gray;
+	}
+
+	&__row {
+		justify-content: space-between;
+		align-items: end;
+	}
+
+	&__content {
+		width: 35rem;
+		flex-shrink: 0;
+	}
+
+	&__select {
+		width: 100%;
+		margin-bottom: 3.5rem;
+	}
+
+	&__input {
+		width: 100%;
+		margin-bottom: 3.5rem;
+		padding: 4.2rem 3.2rem;
+	}
+
+	&__btn {
+		width: 100%;
+		padding: 4rem;
+		font-size: 1.6rem;
+		letter-spacing: 0.032em;
+	}
+
+	&__img {
+		width: 25rem;
+		height: 25rem;
+		flex-shrink: 0;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+}
+
+
+.popup-callback {
+	.popup__title {
+		margin-bottom: 4rem;
+	}
+
+}
+
+.popup-wait {
+	.popup__body {
+		background: url('../media/img/popup-catalog.png') right bottom / auto 74% no-repeat, #fff;
+	}
+
+	.popup__title {
+		max-width: 44.2rem;
+	}
+}
+
+.popup-conf {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.popup__body {
+		position: relative;
+		width: 80%;
+		font-size: 1.6rem;
+		padding-right: 12rem;
+		line-height: 125%;
+
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	.popup__close {
+		top: 3rem;
+		right: 3rem;
+	}
+}
+
+
+@media (max-width:768px) {
+	.popup {
+		display: flex;
+		align-items: center;
+
+		&__body {
+			position: relative;
+			width: 88%;
+			padding: 3rem 3rem 2.5rem;
+			border-radius: 3.6rem;
+		}
+
+		&__close {
+			top: 1.5rem;
+			right: 1.5rem;
+			width: 3rem;
+			height: 3rem;
+
+			svg {
+				width: 1.3rem;
+				height: 0.9rem;
+			}
+		}
+
+		&__title {
+			margin-bottom: 1.5rem;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+		}
+
+		&__overhead {
+			margin-bottom: 0.8rem;
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+
+		&__note {
+			margin-bottom: 0.8rem;
+			font-size: 1rem;
+			line-height: 1.4rem;
+		}
+
+		&__row {
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+
+		&__content {
+			width: 100%;
+		}
+
+		&__select {
+			margin-bottom: 1.5rem;
+		}
+
+		&__input {
+			margin-bottom: 1.5rem;
+			padding: 2.1rem 2rem;
+		}
+
+		&__btn {
+			padding: 2.1rem 2rem;
+			font-size: 1.2rem;
+		}
+
+		&__img {
+			width: 20rem;
+			height: 20rem;
+			margin: 0 auto;
+		}
+	}
+
+	.popup-callback {
+		.popup__title {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.popup-wait {
+		.popup__body {
+			padding-bottom: 20rem;
+			background: url('../media/img/popup-catalog-mobile.png') -100% calc(100% + 6rem) / 108% auto no-repeat, #fff;
+		}
+	}
+
+
+	.popup-conf {
+		.popup__body {
+			font-size: 1rem;
+			padding: 3rem 3rem 2.5rem 2rem;
+
+			h2 {
+				font-size: 1.2rem;
+				padding: 0.5rem 0;
+			}
+		}
+
+		.popup__close {
+			top: 1.5rem;
+			right: 1.5rem;
+		}
+	}
+}

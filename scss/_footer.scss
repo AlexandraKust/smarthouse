@@ -1,0 +1,80 @@
+.footer {
+	padding: 3.6rem 0 5.3rem;
+
+	&__row {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__rigths {
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: $gray;
+	}
+
+	&__conf {
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		text-decoration: underline;
+		color: $main-color;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+
+	&__author {
+		width: 15.4rem;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: $gray;
+		text-align: right;
+
+		a {
+			font-size: inherit;
+			line-height: inherit;
+			color: inherit;
+
+			&:hover {
+				text-decoration-line: underline;
+			}
+		}
+	}
+}
+
+.footer--secondary {
+	padding: 4.3rem 0 3.2rem;
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 2.2rem 0 12.3rem;
+
+		&__row {
+			flex-wrap: wrap;
+			align-items: start;
+			gap: 1.6rem;
+		}
+
+		&__rigths {
+			width: 100%;
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
+
+		&__conf {
+			width: 100%;
+			font-size: 1.2rem;
+			line-height: 2rem;
+			text-align: left;
+		}
+
+		&__author {
+			width: 100%;
+			font-size: 1.2rem;
+			line-height: 2rem;
+			text-align: left;
+		}
+	}
+}

@@ -1,15 +1,31 @@
-.portfolio {
-	padding: 11.8rem 0 5.8rem;
+.feedback {
+	position: relative;
+	padding: 6.1rem 0 5.8rem;
 
-	&__title .accent {
-		display: block;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 6rem;
+		right: 0.3rem;
+		width: 37.9rem;
+		height: 32.2rem;
+		background: url('../media/svg/quote.svg') 0 0 / 100% 100% no-repeat;
+	}
+
+	&__title {
+		max-width: 105rem;
+
+		.accent {
+			display: block;
+		}
 	}
 
 	&__subtitle {
-		margin-bottom: 8.1rem;
+		margin-bottom: 2.7rem;
 	}
 
 	&__swiper {
+		padding-top: 3.3rem;
 		margin-bottom: 7.7rem;
 		margin-right: -2rem;
 	}
@@ -31,7 +47,7 @@
 		&:hover {
 			cursor: pointer;
 
-			.portfolio__img {
+			.feedback__img {
 				transform: scale(1.05);
 
 				&::after {
@@ -39,7 +55,7 @@
 				}
 			}
 
-			.portfolio__play {
+			.feedback__play {
 				box-shadow: 0 0 1.5rem rgba(221, 221, 221, 0.4);
 				transform: scale(1.1);
 			}
@@ -206,16 +222,20 @@
 }
 
 @media (max-width: 768px) {
-	.portfolio {
-		padding: 4.4rem 0 2.2rem;
+	.feedback {
+		padding: 2.2rem 0;
+
+		&::after {
+			display: none;
+		}
 
 		&__subtitle {
-			margin-bottom: 3.2rem;
+			margin-bottom: 1rem;
 		}
 
 		&__swiper {
 			margin: 0 -3.7rem 1.4rem;
-			padding: 0 3.7rem;
+			padding: 2.2rem 3.7rem 0;
 		}
 
 		&__slide {
