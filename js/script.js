@@ -229,11 +229,7 @@ $("[data-anchor-btn-js]").on("click", function (event) {
 	var target = $(this).attr('href');
 
 	if ($(target).length) {
-		if (window.innerWidth > 768) {
-			var offset = ($(target).offset().top);
-		} else {
-			var offset = ($(target).offset().top) - headerHeight - 50;
-		}
+		var offset = ($(target).offset().top);
 
 		let scroll = $(window).scrollTop();
 		let windowHeight = $(window).height();
@@ -266,11 +262,8 @@ function handler(event) {
 	var tag = $(hash);
 
 	if (tag.length) {
-		if (window.innerWidth > 768) {
-			var offset = tag.offset().top;
-		} else {
-			var offset = tag.offset().top - headerHeight;
-		}
+		var offset = tag.offset().top;
+
 		$('html, body').stop().animate({
 			scrollTop: offset
 		}, 2000);
