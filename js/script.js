@@ -13,27 +13,12 @@ setTimeout(function () {
 	$('.hero-title').addClass('visible');
 }, 500)
 
-// прилипание шапки
 let header = document.querySelector('header');
-if (window.pageYOffset > 30) {
-	header.classList.add('fixed');
-} else {
-	header.classList.remove('fixed');
-}
-window.addEventListener('scroll', function () {
-	if (window.pageYOffset > 30) {
-		header.classList.add('fixed');
-	} else {
-		header.classList.remove('fixed');
-	}
-});
-
-
 let burger = document.querySelector('.burger');
 let loc = document.querySelector('.location');
 let navMenu = nav.querySelector('.nav__menu');
 let navLoc = nav.querySelector('.nav__location');
-let sidebar = document.querySelector('.sidebar');
+let sidebar = document.querySelector('.sidebar__list');
 
 burger.addEventListener('click', function () {
 	if (navLoc.classList.contains('active')) {
@@ -95,7 +80,7 @@ function closeMenu() {
 
 let contactsBtn = document.querySelector('.sidebar__btn.phone');
 let contactsSidebar = document.querySelector('.sidebar__social');
-if (contactsBtn && window.innerWidth < 768) {
+if (contactsBtn) {
 	contactsBtn.addEventListener('click', function () {
 		contactsBtn.classList.toggle('active');
 		contactsSidebar.classList.toggle('active');
@@ -821,13 +806,6 @@ if (excursionNow) {
 		excursionDate.value = 'Дата: ' + value.slice(8, 10) + '.' + value.slice(5, 7) + '.' + value.slice(0, 4) + ' Время: ' + value.slice(11);
 	}
 }
-
-let excursionCard = document.querySelectorAll('.excursion__item');
-excursionCard.forEach(card => {
-	card.addEventListener('click', function () {
-		card.classList.toggle('active');
-	})
-})
 
 let hupothecItem = document.querySelectorAll('.hypothec__item');
 hupothecItem.forEach(item => {

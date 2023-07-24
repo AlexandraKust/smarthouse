@@ -227,6 +227,8 @@
 		}
 
 		&__download {
+			position: relative;
+			z-index: 5;
 			flex-basis: 7.6rem;
 			width: 7.6rem;
 			height: 7.6rem;
